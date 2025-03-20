@@ -1,16 +1,16 @@
 // import React, { useEffect, useState } from "react";
 // import { Link, useParams } from "react-router-dom";
 
-// import { getBlogExelDataAction } from "../ReduxStore/actions/ExelDataActions";
+// import { getDataAction } from "../ReduxStore/actions/ExelDataActions";
 // import { connect } from "react-redux";
 
-// function BlogDetails({ BlogDetailsList, getBlogExelDataAction }) {
+// function BlogDetails({ BlogDetailsList, getDataAction }) {
 
 //     let blogSlug = useParams();
 
 //     const [blogDetais, setBlogDetais] = useState();
 //     useEffect(() => {
-//         getBlogExelDataAction()
+//         getDataAction()
 //     }, [])
 
 
@@ -120,6 +120,6 @@
 // export default connect(
 //     mapStateToProps,
 //     {
-//         getBlogExelDataAction
+//         getDataAction
 //     }
 // )(BlogDetails);

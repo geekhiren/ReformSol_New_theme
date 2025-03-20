@@ -20,11 +20,13 @@ import visiton_img3 from "../assets/img/about/visiton-img3.png"
 import solution_iocn1 from "../assets/img/icons/solution-iocn1.png"
 import solution_iocn2 from "../assets/img/icons/solution-iocn2.png"
 import about_tab_img from "../assets/img/about/about-tab-img.png"
-import tes2_icon from "../assets/img/icons/tes2-icon.png"
 import team2_img1 from "../assets/img/team/team2-img1.png"
 import team2_img2 from "../assets/img/team/team2-img2.png"
 import team2_img3 from "../assets/img/team/team2-img3.png"
 import team2_img4 from "../assets/img/team/team2-img4.png"
+import Testimonial from "../Components/Testimonial.jsx"
+
+
 function AboutUs() {
     return (
         <>
@@ -578,177 +580,7 @@ function AboutUs() {
                 </div>
             </div>
 
-            <div className="testimonial2 pt100 pb40">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-6 m-auto text-center">
-                            <div className="heading2">
-                                <span className="span"><img src={span2} alt="" /> Testimonials</span>
-                                <h2>See What Our Customer Say’s</h2>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="space60"></div>
-                    <div className="row">
-                        <div className="tes2-slider owl-carousel">
-                            <div className="single-slider">
-                                <div className="icon">
-                                    <img src={tes2_icon} alt="" />
-                                </div>
-                                <p className="pera">"I have been thoroughly impressed with the level of service and expertise provided by
-                                    TechXen. Their team went above and beyond to understand our business needs and deliver a custom software
-                                    solution. I highly recommend them to anyone looking for top-notch technology solutions."</p>
-
-                                <div className="bottom-area">
-                                    <div className="author">
-                                        <a href="#">Jason Behrendorff</a>
-                                    </div>
-                                    <div className="reating">
-                                        <ul>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star-half"></i></li>
-                                        </ul>
-                                        <p>(4.5)</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="single-slider">
-                                <div className="icon">
-                                    <img src={tes2_icon} alt="" />
-                                </div>
-                                <p className="pera">"We approached TechXen with a complex IT problem, and they were able to provide an
-                                    innovative solution that addressed our needs perfectly. Their team's creativity, technical prowess, and
-                                    dedication to client satisfaction are truly commendable.”</p>
-
-                                <div className="bottom-area">
-                                    <div className="author">
-                                        <a href="#">Matthew Kuhnemann</a>
-                                    </div>
-                                    <div className="reating">
-                                        <ul>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                        </ul>
-                                        <p>(4.5)</p>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div className="single-slider">
-                                <div className="icon">
-                                    <img src={tes2_icon} alt="" />
-                                </div>
-                                <p className="pera">“TechXen has been our go-to partner for IT support for several years now, and they have
-                                    consistently delivered outstanding service. Their team is highly responsive, knowledgeable, reliable.
-                                    Thanks to their expertise, we've been able to overcome various IT challenges focus growing business."</p>
-
-                                <div className="bottom-area">
-                                    <div className="author">
-                                        <a href="#">Scott Boland</a>
-                                    </div>
-                                    <div className="reating">
-                                        <ul>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star-half"></i></li>
-                                        </ul>
-                                        <p>(4.5)</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="single-slider">
-                                <div className="icon">
-                                    <img src={tes2_icon} alt="" />
-                                </div>
-                                <p className="pera">"I have been thoroughly impressed with the level of service and expertise provided by
-                                    TechXen. Their team went above and beyond to understand our business needs and deliver a custom software
-                                    solution. I highly them to anyone looking for top-notch technology solutions."</p>
-
-                                <div className="bottom-area">
-                                    <div className="author">
-                                        <a href="#">Jason Behrendorff</a>
-                                    </div>
-                                    <div className="reating">
-                                        <ul>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star-half"></i></li>
-                                        </ul>
-                                        <p>(4.5)</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="single-slider">
-                                <div className="icon">
-                                    <img src={tes2_icon} alt="" />
-                                </div>
-                                <p className="pera">"We approached TechXen with a complex IT problem, and they were able to provide an
-                                    innovative solution that addressed our needs perfectly. Their team's creativity, technical prowess, and
-                                    dedication to client satisfaction are truly commendable.”</p>
-
-                                <div className="bottom-area">
-                                    <div className="author">
-                                        <a href="#">Matthew Kuhnemann</a>
-                                    </div>
-                                    <div className="reating">
-                                        <ul>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                        </ul>
-                                        <p>(4.5)</p>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div className="single-slider">
-                                <div className="icon">
-                                    <img src={tes2_icon} alt="" />
-                                </div>
-                                <p className="pera">“TechXen has been our go-to partner for IT support for several years now, and they have
-                                    consistently delivered outstanding service. Their team is highly responsive, knowledgeable, reliable.
-                                    Thanks to their expertise, we've been able to overcome various IT challenges focus growing business."</p>
-
-                                <div className="bottom-area">
-                                    <div className="author">
-                                        <a href="#">Scott Boland</a>
-                                    </div>
-                                    <div className="reating">
-                                        <ul>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star-half"></i></li>
-                                        </ul>
-                                        <p>(4.5)</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            <Testimonial />
 
             <div className="team2 sp">
                 <div className="container">

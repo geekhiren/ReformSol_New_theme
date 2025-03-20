@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { getServiceExelDataAction } from "../ReduxStore/actions/ExelDataActions";
+import { getDataAction } from "../ReduxStore/actions/ExelDataActions";
 import { connect } from "react-redux";
 
 import span2 from "../assets/img/icons/span2.png"
@@ -27,10 +27,9 @@ import about2_img3 from "../assets/img/about/about2-img3.png"
 function Services({ servicesList, getServiceExelDataAction }) {
 
     useEffect(() => {
-        getServiceExelDataAction()
+        getDataAction()
     }, [])
 
-    console.log('servicesList', servicesList)
 
     return (
         <>
@@ -177,7 +176,7 @@ function Services({ servicesList, getServiceExelDataAction }) {
             <div className="servcie2">
                 <div className="container">
                     <div className="row">
-                        {servicesList?.map(service =>
+                        {servicesList?.services?.map(service =>
                             <div className="col-lg-4 col-md-6">
                                 <div className="">
                                     <div className="servcie2-box ">
@@ -260,13 +259,13 @@ function Services({ servicesList, getServiceExelDataAction }) {
 
 const mapStateToProps = (state) => {
     return {
-        servicesList: state.ServiceExelDataReducer?.data?.services,
+        servicesList: state.ExelDataReducer?.data
     };
 };
 
 export default connect(
     mapStateToProps,
     {
-        getServiceExelDataAction
+        getDataAction
     }
 )(Services);

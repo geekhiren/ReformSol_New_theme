@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
-import { getBlogExelDataAction } from "../ReduxStore/actions/ExelDataActions";
+import { getDataAction } from "../ReduxStore/actions/ExelDataActions";
 
 
 import span2 from "../assets/img/icons/span2.png"
@@ -17,12 +17,12 @@ import date from "../assets/img/icons/date.png"
 import user from "../assets/img/icons/user.png"
 
 import { Link, json } from "react-router-dom";
-function Blogs({ BlogsList, getBlogExelDataAction }) {
+function Blogs({ BlogsList, getDataAction }) {
     const [filteredBlogList, setFilteredBlogList] = useState([]);
     const [selectedTags, setSelectedTags] = useState([]);
 
     useEffect(() => {
-        getBlogExelDataAction()
+        getDataAction()
     }, [])
     useEffect(() => {
         // if (BlogsList?.data?.blogs) {
@@ -186,7 +186,6 @@ function Blogs({ BlogsList, getBlogExelDataAction }) {
 
             <div className="space100"></div>
 
-
             <div className="blog">
                 <div className="container">
                     <div className="row">
@@ -243,6 +242,6 @@ const mapStateToProps = (state) => {
 export default connect(
     mapStateToProps,
     {
-        getBlogExelDataAction
+        getDataAction
     }
 )(Blogs);

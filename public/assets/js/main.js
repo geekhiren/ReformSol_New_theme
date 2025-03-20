@@ -567,24 +567,24 @@
       });
     }
     
-        // page-progress
-        var progressPath = document.querySelector(".progress-wrap path");
-        var pathLength = progressPath?.getTotalLength();
-        progressPath?.style.transition = progressPath?.style.WebkitTransition =
-          "none";
-        progressPath?.style.strokeDasharray = pathLength + " " + pathLength;
-        progressPath?.style.strokeDashoffset = pathLength;
-        progressPath?.getBoundingClientRect();
-        progressPath?.style.transition = progressPath?.style.WebkitTransition =
-          "stroke-dashoffset 10ms linear";
-        var updateProgress = function () {
-          var scroll = $(window).scrollTop();
-          var height = $(document).height() - $(window).height();
-          var progress = pathLength - (scroll * pathLength) / height;
-          progressPath?.style.strokeDashoffset = progress;
-        };
-        updateProgress();
-        $(window).scroll(updateProgress);
+        // // page-progress
+        // var progressPath = document.querySelector(".progress-wrap path");
+        // var pathLength = progressPath?.getTotalLength();
+        // progressPath?.style.transition = progressPath?.style.WebkitTransition =
+        //   "none";
+        // progressPath?.style.strokeDasharray = pathLength + " " + pathLength;
+        // progressPath?.style.strokeDashoffset = pathLength;
+        // progressPath?.getBoundingClientRect();
+        // progressPath?.style.transition = progressPath?.style.WebkitTransition =
+        //   "stroke-dashoffset 10ms linear";
+        // var updateProgress = function () {
+        //   var scroll = $(window).scrollTop();
+        //   var height = $(document).height() - $(window).height();
+        //   var progress = pathLength - (scroll * pathLength) / height;
+        //   progressPath?.style.strokeDashoffset = progress;
+        // };
+        // updateProgress();
+        // $(window).scroll(updateProgress);
         var offset = 50;
         var duration = 550;
         jQuery(window).on("scroll", function () {

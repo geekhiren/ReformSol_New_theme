@@ -34,15 +34,26 @@ import hero2_shape2 from "../assets/img/shapes/hero2-shape2.png"
 import hero2_main_img1 from "../assets/img/hero/hero2-main-img1.png"
 import hero2_main_img2 from "../assets/img/hero/hero2-main-img2.png"
 
-import { getServiceExelDataAction } from "../ReduxStore/actions/ExelDataActions";
+import { getDataAction } from "../ReduxStore/actions/ExelDataActions";
 import { connect } from "react-redux";
+import Testimonial from "../Components/Testimonial.jsx"
+import { Swiper, SwiperSlide } from 'swiper/react';
 
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
 
-function Home({ getServiceExelDataAction, servicesList }) {
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
+function Home({ getDataAction, dataList }) {
 
     useEffect(() => {
-        getServiceExelDataAction()
+        getDataAction()
     }, [])
+
+    console.log(dataList)
+
 
     return (
         <>
@@ -52,7 +63,10 @@ function Home({ getServiceExelDataAction, servicesList }) {
                         <div className="col-lg-6">
                             <div className="main-heading">
                                 <span className="span" data-aos="zoom-in-right" data-aos-duration="700">
-                                    <img src={span2} alt="" /> TechXen Technology & It Solution</span> <h1 className="title tg-element-title">Empowering Your Digital Journey With TechXen</h1>
+                                    {/* <img src={span2} alt="" /> TechXen Technology & It Solution */}
+                                </span>
+                                <h1 className="title tg-element-title">Crafting Solutions Beyond Boundaries, Driving Progress Together.
+                                </h1>
                             </div>
 
                             <div className="row _relative">
@@ -163,91 +177,35 @@ function Home({ getServiceExelDataAction, servicesList }) {
                 </div>
             </div >
 
-            <div className="servcie2">
-                <div className="container">
-                    <div className="row">
-                        {servicesList?.map(service =>
-                            <div className="col-lg-4 col-md-6">
-                                <div className="">
-                                    <div className="servcie2-box ">
-                                        <div className="icon">
-                                            <img src={service2_icon1} alt="" />
-                                        </div>
-                                        <Link href={`/service/${service.slug}`} className="arrow"><i className="fa-solid fa-arrow-right"></i></Link>
-                                        <div className="heading2">
-                                            <h4><Link href={`/service/${service.slug}`}>{service.title}</Link></h4>
-                                            <div className="space16"></div>
-                                            <p>Strategic IT planning roadmap development Business process analysis and improvement for It solution &
-                                                technology.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        )}
-                    </div>
-
-                </div>
-            </div>
-
-            <div className="about2 pt100 ">
-                <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-lg-6">
-                            <div className="heading2">
-                                <span className="span">
-                                    <img src={span2} alt="" /> Our Service</span> <h2>Empower Your Business With Our Comprehensive IT Solutions</h2>
-                                <div className="space16"></div>
-                                <p>Welcome to TechXen, your premier destination for cutting-edge technology solutions and IT services. At
-                                    TechXen, we are passionate about harnessing the power of technology to empower businesses a like.</p>
-                                <div className="space10"></div>
-                                <div className="porgress-line-all">
-                                    <div className="progress-line">
-                                        <h6>IT Consulting</h6>
-                                        <div className="progress1" data-init="true">
-                                            <div class="percentCount">100%</div>
-                                            <div class="progressbar" >
-                                                <div class="proggress" >
-                                                </div>
+            <div className="space100"></div>
+            {dataList?.services?.length &&
+                <div className="servcie2">
+                    <div className="container">
+                        <div className="row">
+                            {dataList?.services?.map(service =>
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="">
+                                        <div className="servcie2-box ">
+                                            <div className="icon">
+                                                <img src={service2_icon1} alt="" />
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div className="progress-line">
-                                        <h6>Cyber Security</h6>
-                                        <div className="progress2" data-init="true">
-                                            <div class="percentCount">98%</div>
-                                            <div class="progressbar" >
-                                                <div class="proggress" >
-                                                </div>
+                                            <Link href={`/service/${service.slug}`} className="arrow"><i className="fa-solid fa-arrow-right"></i></Link>
+                                            <div className="heading2">
+                                                <h4><Link href={`/service/${service.slug}`}>{service.title}</Link></h4>
+                                                <div className="space16"></div>
+                                                <p>Strategic IT planning roadmap development Business process analysis and improvement for It solution &
+                                                    technology.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="space30"></div>
-                                <div className="button">
-                                    <Link className="theme-btn2" to="/about">Learn More <i className="fa-solid fa-arrow-right"></i></Link>
-                                </div>
-                            </div>
+                            )}
                         </div>
-                        <div className="col-lg-6">
-                            <div className="about2-images">
-                                <div className="image1">
-                                    <img src={about2_img1} alt="" />
-                                </div>
-                                <div className="image2">
-                                    <img src={about2_img2} alt="" />
-                                </div>
-                                <div className="image3">
-                                    <img src={about2_img3} alt="" />
-                                </div>
-                                <div className="counter-box">
-                                    <h3>25</h3>
-                                    <p>Years Of <br /> Experience</p>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
-                </div>
-            </div>
+                </div>}
+
+
 
             {/* <div className="work2 pt100">
                 <div className="container">
@@ -463,450 +421,7 @@ function Home({ getServiceExelDataAction, servicesList }) {
 
 
 
-            <div class="testimonial2 pt100 pb40">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 m-auto text-center">
-                            <div class="heading2">
-                                <span class="span"><img src={span2} alt="" /> Testimonials</span>
-                                <h2 class="title tg-element-title" style="perspective: 400px;"><div class="split-line" style="display: block; text-align: center; position: relative;"><div style="position:relative;display:inline-block;"><div style="position: relative; display: inline-block; opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">S</div><div style="position: relative; display: inline-block; opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">e</div><div style="position: relative; display: inline-block; opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">e</div></div> <div style="position:relative;display:inline-block;"><div style="position: relative; display: inline-block; opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">W</div><div style="position: relative; display: inline-block; opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">h</div><div style="position: relative; display: inline-block; opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">a</div><div style="position: relative; display: inline-block; opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">t</div></div> <div style="position:relative;display:inline-block;"><div style="position: relative; display: inline-block; opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">O</div><div style="position: relative; display: inline-block; opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">u</div><div style="position: relative; display: inline-block; opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">r</div></div> </div><div class="split-line" style="display: block; text-align: center; position: relative;"><div style="position:relative;display:inline-block;"><div style="position: relative; display: inline-block; opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">C</div><div style="position: relative; display: inline-block; opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">u</div><div style="position: relative; display: inline-block; opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">s</div><div style="position: relative; display: inline-block; opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">t</div><div style="position: relative; display: inline-block; opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">o</div><div style="position: relative; display: inline-block; opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">m</div><div style="position: relative; display: inline-block; opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">e</div><div style="position: relative; display: inline-block; opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">r</div></div> <div style="position:relative;display:inline-block;"><div style="position: relative; display: inline-block; opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">S</div><div style="position: relative; display: inline-block; opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">a</div><div style="position: relative; display: inline-block; opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">y</div><div style="position: relative; display: inline-block; opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">’</div><div style="position: relative; display: inline-block; opacity: 1; translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">s</div></div></div></h2>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="space60"></div>
-                    <div class="row">
-                        <div class="tes2-slider owl-carousel owl-loaded owl-drag aos-init aos-animate" data-aos="fade-up" data-aos-duration="700">
-
-                            <div class="owl-stage-outer"><div class="owl-stage" style="transition: 1s; width: 3744px; transform: translate3d(-2184px, 0px, 0px);"><div class="owl-item cloned" style="width: 312px;"><div class="single-slider">
-                                <div class="icon">
-                                    <img src={tes2_icon} alt="" />
-                                </div>
-                                <p class="pera">"I have been thoroughly impressed with the level of service and expertise provided by TechXen. Their team went above and beyond to understand our business needs and deliver a custom software solution. I highly them to anyone looking for top-notch technology solutions."</p>
-
-                                <div class="bottom-area">
-                                    <div class="author">
-                                        <a href="#">Jason Behrendorff</a>
-                                    </div>
-                                    <div class="reating">
-                                        <ul>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star-half"></i></li>
-                                        </ul>
-                                        <p>(4.5)</p>
-                                    </div>
-                                </div>
-                            </div></div><div class="owl-item cloned" style="width: 312px;"><div class="single-slider">
-                                <div class="icon">
-                                    <img src={tes2_icon} alt="" />
-                                </div>
-                                <p class="pera">"We approached TechXen with a complex IT problem, and they were able to provide an innovative solution that addressed our needs perfectly. Their team's creativity, technical prowess, and dedication to client satisfaction are truly commendable.”</p>
-
-                                <div class="bottom-area">
-                                    <div class="author">
-                                        <a href="#">Matthew Kuhnemann</a>
-                                    </div>
-                                    <div class="reating">
-                                        <ul>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                        </ul>
-                                        <p>(4.5)</p>
-                                    </div>
-                                </div>
-                            </div></div><div class="owl-item cloned" style="width: 312px;"><div class="single-slider">
-                                <div class="icon">
-                                    <img src={tes2_icon} alt="" />
-                                </div>
-                                <p class="pera">“TechXen has been our go-to partner for IT support for several years now, and they have consistently delivered outstanding service. Their team is highly responsive, knowledgeable, reliable. Thanks to their expertise, we've been able to overcome various IT challenges focus growing business."</p>
-
-                                <div class="bottom-area">
-                                    <div class="author">
-                                        <a href="#">Scott Boland</a>
-                                    </div>
-                                    <div class="reating">
-                                        <ul>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star-half"></i></li>
-                                        </ul>
-                                        <p>(4.5)</p>
-                                    </div>
-                                </div>
-                            </div></div><div class="owl-item" style="width: 312px;"><div class="single-slider">
-                                <div class="icon">
-                                    <img src={tes2_icon} alt="" />
-                                </div>
-                                <p class="pera">"I have been thoroughly impressed with the level of service and expertise provided by TechXen. Their team went above and beyond to understand our business needs and deliver a custom software solution. I highly recommend them to anyone looking for top-notch technology solutions."</p>
-
-                                <div class="bottom-area">
-                                    <div class="author">
-                                        <a href="#">Jason Behrendorff</a>
-                                    </div>
-                                    <div class="reating">
-                                        <ul>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star-half"></i></li>
-                                        </ul>
-                                        <p>(4.5)</p>
-                                    </div>
-                                </div>
-                            </div></div><div class="owl-item" style="width: 312px;"><div class="single-slider">
-                                <div class="icon">
-                                    <img src={tes2_icon} alt="" />
-                                </div>
-                                <p class="pera">"We approached TechXen with a complex IT problem, and they were able to provide an innovative solution that addressed our needs perfectly. Their team's creativity, technical prowess, and dedication to client satisfaction are truly commendable.”</p>
-
-                                <div class="bottom-area">
-                                    <div class="author">
-                                        <a href="#">Matthew Kuhnemann</a>
-                                    </div>
-                                    <div class="reating">
-                                        <ul>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                        </ul>
-                                        <p>(4.5)</p>
-                                    </div>
-                                </div>
-                            </div></div><div class="owl-item" style="width: 312px;"><div class="single-slider">
-                                <div class="icon">
-                                    <img src={tes2_icon} alt="" />
-                                </div>
-                                <p class="pera">“TechXen has been our go-to partner for IT support for several years now, and they have consistently delivered outstanding service. Their team is highly responsive, knowledgeable, reliable. Thanks to their expertise, we've been able to overcome various IT challenges focus growing business."</p>
-
-                                <div class="bottom-area">
-                                    <div class="author">
-                                        <a href="#">Scott Boland</a>
-                                    </div>
-                                    <div class="reating">
-                                        <ul>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star-half"></i></li>
-                                        </ul>
-                                        <p>(4.5)</p>
-                                    </div>
-                                </div>
-                            </div></div><div class="owl-item" style="width: 312px;"><div class="single-slider">
-                                <div class="icon">
-                                    <img src={tes2_icon} alt="" />
-                                </div>
-                                <p class="pera">"I have been thoroughly impressed with the level of service and expertise provided by TechXen. Their team went above and beyond to understand our business needs and deliver a custom software solution. I highly them to anyone looking for top-notch technology solutions."</p>
-
-                                <div class="bottom-area">
-                                    <div class="author">
-                                        <a href="#">Jason Behrendorff</a>
-                                    </div>
-                                    <div class="reating">
-                                        <ul>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star-half"></i></li>
-                                        </ul>
-                                        <p>(4.5)</p>
-                                    </div>
-                                </div>
-                            </div></div><div class="owl-item active" style="width: 312px;"><div class="single-slider">
-                                <div class="icon">
-                                    <img src={tes2_icon} alt="" />
-                                </div>
-                                <p class="pera">"We approached TechXen with a complex IT problem, and they were able to provide an innovative solution that addressed our needs perfectly. Their team's creativity, technical prowess, and dedication to client satisfaction are truly commendable.”</p>
-
-                                <div class="bottom-area">
-                                    <div class="author">
-                                        <a href="#">Matthew Kuhnemann</a>
-                                    </div>
-                                    <div class="reating">
-                                        <ul>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                        </ul>
-                                        <p>(4.5)</p>
-                                    </div>
-                                </div>
-                            </div></div><div class="owl-item active center" style="width: 312px;"><div class="single-slider">
-                                <div class="icon">
-                                    <img src={tes2_icon} alt="" />
-                                </div>
-                                <p class="pera">“TechXen has been our go-to partner for IT support for several years now, and they have consistently delivered outstanding service. Their team is highly responsive, knowledgeable, reliable. Thanks to their expertise, we've been able to overcome various IT challenges focus growing business."</p>
-
-                                <div class="bottom-area">
-                                    <div class="author">
-                                        <a href="#">Scott Boland</a>
-                                    </div>
-                                    <div class="reating">
-                                        <ul>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star-half"></i></li>
-                                        </ul>
-                                        <p>(4.5)</p>
-                                    </div>
-                                </div>
-                            </div></div><div class="owl-item cloned active" style="width: 312px;"><div class="single-slider">
-                                <div class="icon">
-                                    <img src={tes2_icon} alt="" />
-                                </div>
-                                <p class="pera">"I have been thoroughly impressed with the level of service and expertise provided by TechXen. Their team went above and beyond to understand our business needs and deliver a custom software solution. I highly recommend them to anyone looking for top-notch technology solutions."</p>
-
-                                <div class="bottom-area">
-                                    <div class="author">
-                                        <a href="#">Jason Behrendorff</a>
-                                    </div>
-                                    <div class="reating">
-                                        <ul>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star-half"></i></li>
-                                        </ul>
-                                        <p>(4.5)</p>
-                                    </div>
-                                </div>
-                            </div></div><div class="owl-item cloned" style="width: 312px;"><div class="single-slider">
-                                <div class="icon">
-                                    <img src={tes2_icon} alt="" />
-                                </div>
-                                <p class="pera">"We approached TechXen with a complex IT problem, and they were able to provide an innovative solution that addressed our needs perfectly. Their team's creativity, technical prowess, and dedication to client satisfaction are truly commendable.”</p>
-
-                                <div class="bottom-area">
-                                    <div class="author">
-                                        <a href="#">Matthew Kuhnemann</a>
-                                    </div>
-                                    <div class="reating">
-                                        <ul>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                        </ul>
-                                        <p>(4.5)</p>
-                                    </div>
-                                </div>
-                            </div></div><div class="owl-item cloned" style="width: 312px;"><div class="single-slider">
-                                <div class="icon">
-                                    <img src={tes2_icon} alt="" />
-                                </div>
-                                <p class="pera">“TechXen has been our go-to partner for IT support for several years now, and they have consistently delivered outstanding service. Their team is highly responsive, knowledgeable, reliable. Thanks to their expertise, we've been able to overcome various IT challenges focus growing business."</p>
-
-                                <div class="bottom-area">
-                                    <div class="author">
-                                        <a href="#">Scott Boland</a>
-                                    </div>
-                                    <div class="reating">
-                                        <ul>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star-half"></i></li>
-                                        </ul>
-                                        <p>(4.5)</p>
-                                    </div>
-                                </div>
-                            </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots"><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot active"><span></span></button></div></div>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div className="testimonial2 pt100 pb40">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-6 m-auto text-center">
-                            <div className="heading2">
-                                <span className="span">
-                                    <img src={span2} alt="" /> Testimonials</span> <h2 className="title tg-element-title">See What Our Customer Say’s</h2>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="space60"></div>
-                    <div className="row">
-                        <div className="tes2-slider owl-carousel" data-aos="fade-up" data-aos-duration="700">
-                            <div className="single-slider">
-                                <div className="icon">
-                                    <img src={tes2_icon} alt="" />
-                                </div>
-                                <p className="pera">"I have been thoroughly impressed with the level of service and expertise provided by TechXen.
-                                    Their team went above and beyond to understand our business needs and deliver a custom software solution. I
-                                    highly recommend them to anyone looking for top-notch technology solutions."</p>
-
-                                <div className="bottom-area">
-                                    <div className="author">
-                                        <a href="#">Jason Behrendorff</a>
-                                    </div>
-                                    <div className="reating">
-                                        <ul>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star-half"></i></li>
-                                        </ul>
-                                        <p>(4.5)</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="single-slider">
-                                <div className="icon">
-                                    <img src={tes2_icon} alt="" />
-                                </div>
-                                <p className="pera">"We approached TechXen with a complex IT problem, and they were able to provide an innovative
-                                    solution that addressed our needs perfectly. Their team's creativity, technical prowess, and dedication to
-                                    client satisfaction are truly commendable.”</p>
-
-                                <div className="bottom-area">
-                                    <div className="author">
-                                        <a href="#">Matthew Kuhnemann</a>
-                                    </div>
-                                    <div className="reating">
-                                        <ul>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                        </ul>
-                                        <p>(4.5)</p>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div className="single-slider">
-                                <div className="icon">
-                                    <img src={tes2_icon} alt="" />
-                                </div>
-                                <p className="pera">“TechXen has been our go-to partner for IT support for several years now, and they have
-                                    consistently delivered outstanding service. Their team is highly responsive, knowledgeable, reliable. Thanks
-                                    to their expertise, we've been able to overcome various IT challenges focus growing business."</p>
-
-                                <div className="bottom-area">
-                                    <div className="author">
-                                        <a href="#">Scott Boland</a>
-                                    </div>
-                                    <div className="reating">
-                                        <ul>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star-half"></i></li>
-                                        </ul>
-                                        <p>(4.5)</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="single-slider">
-                                <div className="icon">
-                                    <img src={tes2_icon} alt="" />
-                                </div>
-                                <p className="pera">"I have been thoroughly impressed with the level of service and expertise provided by TechXen.
-                                    Their team went above and beyond to understand our business needs and deliver a custom software solution. I
-                                    highly them to anyone looking for top-notch technology solutions."</p>
-
-                                <div className="bottom-area">
-                                    <div className="author">
-                                        <a href="#">Jason Behrendorff</a>
-                                    </div>
-                                    <div className="reating">
-                                        <ul>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star-half"></i></li>
-                                        </ul>
-                                        <p>(4.5)</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="single-slider">
-                                <div className="icon">
-                                    <img src={tes2_icon} alt="" />
-                                </div>
-                                <p className="pera">"We approached TechXen with a complex IT problem, and they were able to provide an innovative
-                                    solution that addressed our needs perfectly. Their team's creativity, technical prowess, and dedication to
-                                    client satisfaction are truly commendable.”</p>
-
-                                <div className="bottom-area">
-                                    <div className="author">
-                                        <a href="#">Matthew Kuhnemann</a>
-                                    </div>
-                                    <div className="reating">
-                                        <ul>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                        </ul>
-                                        <p>(4.5)</p>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div className="single-slider">
-                                <div className="icon">
-                                    <img src={tes2_icon} alt="" />
-                                </div>
-                                <p className="pera">“TechXen has been our go-to partner for IT support for several years now, and they have
-                                    consistently delivered outstanding service. Their team is highly responsive, knowledgeable, reliable. Thanks
-                                    to their expertise, we've been able to overcome various IT challenges focus growing business."</p>
-
-                                <div className="bottom-area">
-                                    <div className="author">
-                                        <a href="#">Scott Boland</a>
-                                    </div>
-                                    <div className="reating">
-                                        <ul>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star"></i></li>
-                                            <li><i className="fa-solid fa-star-half"></i></li>
-                                        </ul>
-                                        <p>(4.5)</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <Testimonial />
 
             <div className="blog sp">
                 <div className="container">
@@ -920,47 +435,52 @@ function Home({ getServiceExelDataAction, servicesList }) {
                     </div>
 
                     <div className="space30"></div>
-                    <div className="row">
-                        <div className="col-lg-6">
-                            <div className="blog2-box" data-aos="zoom-in-up" data-aos-duration="800">
-                                <div className="image image-anime">
-                                    <img src={blog2_img2} alt="" />
-                                </div>
-                                <div className="heading2">
-                                    <div className="tags">
-                                        <a href="#" className="date">
-                                            <img src={date} alt="" /> 10/02/2024</a> <a href="#" className="date outhor">
-                                            <img src={user} alt="" /> Ben Cutting</a> </div>
-                                    <h4><a href="blog-details.html">The Importance of Cybersecurity</a></h4>
-                                    <div className="space16"></div>
-                                    <p>We explore the growing trend of remote work and its implications for cybersecurity.</p>
-                                    <div className="space16"></div>
-                                    <a href="blog-details.html" className="learn">Read More <span><i className="fa-solid fa-arrow-right"></i></span></a>
-                                </div>
+                    <div className="blog">
+                        <div className="container">
+                            <div className="row">
+
+                                {/* {dataList && dataList?.map((blog, index) => {
+                                    return (
+                                        index < 2 ?
+                                            <div className="col-lg-6">
+                                                <div className="blog2-box">
+                                                    <div className="image">
+                                                        <img src={blog2_img1} alt="" />
+                                                    </div>
+                                                    <div className="heading2">
+                                                        <div className="tags">
+                                                            <a href="#" className="date"><img src={date} alt="" /> 10/02/2024</a>
+                                                            <a href="#" className="date outhor"><img src={user} alt="" /> Ben Cutting</a>
+                                                        </div>
+                                                        <h4><Link href={blog.slug}>{blog.title}</Link></h4>
+                                                        <div className="space16"></div>
+                                                        <p>We explore the growing trend of remote work and its implications for cybersecurity.</p>
+                                                        <div className="space16"></div>
+                                                        <a href="blog-details.html" className="learn">Read More <span><i className="fa-solid fa-arrow-right"></i></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            : null)
+                                })} */}
+                            </div>
+                            <div className="space60"></div>
+                            {/* <div className="row">
+                        <div className="col-12 m-auto">
+                            <div className="theme-pagination text-center">
+                                <ul>
+                                    <li><a href="#"><i className="fa-solid fa-angle-left"></i></a></li>
+                                    <li><a className="active" href="#">01</a></li>
+                                    <li><a href="#">02</a></li>
+                                    <li>...</li>
+                                    <li><a href="#">12</a></li>
+                                    <li><a href="#"><i className="fa-solid fa-angle-right"></i></a></li>
+                                </ul>
                             </div>
                         </div>
-
-                        <div className="col-lg-6">
-                            <div className="blog2-box" data-aos="zoom-in-up" data-aos-duration="1100">
-                                <div className="image image-anime">
-                                    <img src={blog2_img1} alt="" />
-                                </div>
-                                <div className="heading2">
-                                    <div className="tags">
-                                        <a href="#" className="date">
-                                            <img src={date} alt="" /> 10/02/2024</a> <a href="#" className="date outhor">
-                                            <img src={user} alt="" /> Ben Cutting</a> </div>
-                                    <h4><a href="blog-details.html">The Future of Cloud Computing</a></h4>
-                                    <div className="space16"></div>
-                                    <p>We take a deep dive into the future of cloud computing and discuss emerging trends and predictions that
-                                        the industry.</p>
-                                    <div className="space16"></div>
-                                    <a href="blog-details.html" className="learn">Read More <span><i className="fa-solid fa-arrow-right"></i></span></a>
-                                </div>
-                            </div>
+                    </div> */}
                         </div>
-
                     </div>
+
                 </div>
             </div>
         </>
@@ -968,8 +488,10 @@ function Home({ getServiceExelDataAction, servicesList }) {
 }
 
 const mapStateToProps = (state) => {
+    console.log('state', state)
+
     return {
-        servicesList: state.ServiceExelDataReducer?.data?.services || null,
+        dataList: state.ExelDataReducer?.data
     };
 };
-export default connect(mapStateToProps, { getServiceExelDataAction })(Home);
+export default connect(mapStateToProps, { getDataAction })(Home);
