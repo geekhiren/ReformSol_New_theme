@@ -26,11 +26,11 @@ function App() {
           <Route path="/about" Component={AboutUs} />
           <Route path="/services" Component={Services} />
           <Route path="/service/:serviceSlug" Component={ServiceDetails} />
-          <Route path="/blog" Component={Blogs} />
+          <Route path="/blogs" Component={Blogs} />
+          <Route path="/blog/:blogSlug" Component={BlogDetails} />
           <Route path="/project" Component={Project} />
           {/*<Route path="/case-study" Component={CaseStudy} />
           <Route path="/case-study/:caseStudySlug" Component={CaseDetails} />
-          <Route path="/blog/:blogSlug" Component={BlogDetails} />
           {/* <Route path="*" Component={Home} /> */}
           <Route path="/contact" Component={Contact} />
         </Routes>

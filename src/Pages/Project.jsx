@@ -18,19 +18,19 @@ function Blogs({ BlogsList, tagList, getDataAction }) {
         <>
             <CommonHero mainTitle={"Our Blog"} subTitle={"Blog"} />
 
-            <div class="project-boxs-area sp">
-                <div class="container">
-                    <div class="row">
+            <div className="project-boxs-area sp">
+                <div className="container">
+                    <div className="row">
 
-                        {BlogsList?.map(blog => <div class="col-lg-4 col-md-6">
-                            <div class="project-page-box">
-                                <div class="image">
-                                    <img src={blog2_img1} alt="" />
+                        {BlogsList?.map(blog => <div className="col-lg-4 col-md-6">
+                            <div className="project-page-box">
+                                <div className="image">
+                                    <img src={blog.img} alt="" />
                                 </div>
-                                <div class="heading2">
-                                    <h4><a href="project-details.html">{blog.title}</a></h4>
-                                    <a href="project-details.html" class="learn">Learn More <span><i
-                                        class="fa-solid fa-arrow-right"></i></span></a>
+                                <div className="heading2">
+                                    <h4><Link href="/">{blog.title}</Link></h4>
+                                    <Link href="/" className="learn">Learn More <span><i
+                                        className="fa-solid fa-arrow-right"></i></span></Link>
                                 </div>
                             </div>
                         </div>

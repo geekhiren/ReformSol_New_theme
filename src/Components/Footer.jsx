@@ -9,7 +9,7 @@ function Footer() {
     return (
         <>
             <div className="bottom-circle">
-                <div className="cta2">
+                {/* <div className="cta2">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-8 m-auto text-center">
@@ -36,7 +36,7 @@ function Footer() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
 
                 <div className="footer2 _relative">
@@ -81,7 +81,7 @@ function Footer() {
                                     <ul className="menu-list">
                                         <li><Link to="/about">About Us </Link></li>
                                         <li><Link to="/services">Our Services</Link></li>
-                                        <li><Link to="/blog">Blog & News</Link></li>
+                                        <li><Link to="/blogs">Blog & News</Link></li>
                                         <li><Link to="/contact">Contact Us</Link></li>
                                     </ul>
                                 </div>

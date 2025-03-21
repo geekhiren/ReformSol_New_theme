@@ -69,7 +69,7 @@ function Header() {
 
                                             <li><Link to="/services">Service</Link></li>
 
-                                            <li><Link to="/blog">Blog</Link></li>
+                                            <li><Link to="/blogs">Blog</Link></li>
 
                                             <li><Link to="/project">Project</Link></li>
 
@@ -134,7 +134,7 @@ function Header() {
 
                         <li><Link to="/services">Service</Link></li>
 
-                        <li><Link to="/blog">Blog</Link></li>
+                        <li><Link to="/blogs">Blog</Link></li>
 
                         <li><Link to="/project">Project</Link></li>
                     </ul>

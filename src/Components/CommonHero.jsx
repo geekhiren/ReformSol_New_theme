@@ -9,26 +9,31 @@ import slider_logo6 from "../assets/img/logo/slider-logo6.png"
 import slider_logo7 from "../assets/img/logo/slider-logo7.png"
 
 
-export default function CommonHero({ mainTitle, subTitle }) {
+export default function CommonHero({ mainTitle, subTitle, showBreadCrumb = true }) {
   return <>
     <div className="common-hero">
       <div className="container">
         <div className="row align-items-center text-center">
-          <div className="col-lg-6 m-auto">
+          <div className="col-lg-12 m-auto">
             <div className="main-heading">
-              <h1>{mainTitle}</h1>
+              {showBreadCrumb ?
+                <h1>{mainTitle}</h1> :
+                <h2 className="text-white">{mainTitle}</h2>}
+
               <div className="space16"></div>
-              <span className="span">
-                <img src="assets/img/icons/span2.png" alt="" />
-                <Link to="/">Home</Link>
-                <span className="arrow"><i className="fa-regular fa-angle-right"></i></span>
-                {subTitle}
-              </span>
+              {showBreadCrumb &&
+                <span className="span">
+                  <img src="assets/img/icons/span2.png" alt="" />
+                  <Link to="/">Home</Link>
+                  <span className="arrow"><i className="fa-regular fa-angle-right"></i></span>
+                  {subTitle}
+                </span>
+              }
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </div >
     <section className="hero10-benar">
       <div className="container-fluid p-0">
         <div className="row">

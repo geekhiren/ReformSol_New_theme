@@ -25,18 +25,18 @@ function Blogs({ BlogsList, tagList, getDataAction }) {
                             <div className="col-lg-6">
                                 <div className="blog2-box">
                                     <div className="image">
-                                        <img src={blog2_img1} alt="" />
+                                        <img src={blog.img} alt="" />
                                     </div>
                                     <div className="heading2">
                                         {/* <div className="tags">
                                             <a href="#" className="date"><img src={date} alt="" /> 10/02/2024</a>
                                             <a href="#" className="date outhor"><img src={user} alt="" /> Ben Cutting</a>
                                         </div> */}
-                                        <h4><Link href={blog.slug}>{blog.title}</Link></h4>
+                                        <h4><Link to={'/blog/' + blog.slug.toLowerCase()}>{blog.title}</Link></h4>
                                         <div className="space16"></div>
                                         {/* <p>We explore the growing trend of remote work and its implications for cybersecurity.</p> */}
                                         {/* <div className="space16"></div> */}
-                                        <a href="blog-details.html" className="learn">Read More <span><i className="fa-solid fa-arrow-right"></i></span></a>
+                                        <Link to={'/blog/' + blog.slug.toLowerCase()} className="learn">Read More <span><i className="fa-solid fa-arrow-right"></i></span></Link>
                                     </div>
                                 </div>
                             </div>
@@ -59,7 +59,7 @@ function Blogs({ BlogsList, tagList, getDataAction }) {
                     </div> */}
                 </div>
             </div>
-            
+
             <div className="space100"></div>
         </>
     );

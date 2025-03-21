@@ -37,14 +37,6 @@ import hero2_main_img2 from "../assets/img/hero/hero2-main-img2.png"
 import { getDataAction } from "../ReduxStore/actions/ExelDataActions";
 import { connect } from "react-redux";
 import Testimonial from "../Components/Testimonial.jsx"
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/pagination';
-
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 function Home({ getDataAction, dataList }) {
 
@@ -145,9 +137,9 @@ function Home({ getDataAction, dataList }) {
                                     <div className="progress-line">
                                         <h6>IT Consulting</h6>
                                         <div className="progress1" data-init="true">
-                                            <div class="percentCount">100%</div>
-                                            <div class="progressbar" >
-                                                <div class="proggress" >
+                                            <div className="percentCount">100%</div>
+                                            <div className="progressbar" >
+                                                <div className="proggress" >
                                                 </div>
                                             </div>
                                         </div>
@@ -155,9 +147,9 @@ function Home({ getDataAction, dataList }) {
                                     <div className="progress-line">
                                         <h6>Cyber Security</h6>
                                         <div className="progress2" data-init="true">
-                                            <div class="percentCount">98%</div>
-                                            <div class="progressbar" >
-                                                <div class="proggress" >
+                                            <div className="percentCount">98%</div>
+                                            <div className="progressbar" >
+                                                <div className="proggress" >
                                                 </div>
                                             </div>
                                         </div>

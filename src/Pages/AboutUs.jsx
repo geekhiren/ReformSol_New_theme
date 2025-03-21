@@ -70,7 +70,7 @@ function AboutUs() {
 
                                 <div className="space30"></div>
                                 <div className="button">
-                                    <a className="theme-btn2" href="about.html">Learn More <i className="fa-solid fa-arrow-right"></i></a>
+                                    <Link className="theme-btn2" to="/about">Learn More <i className="fa-solid fa-arrow-right"></i></Link>
                                 </div>
 
                             </div>
@@ -98,8 +98,8 @@ function AboutUs() {
 
                                 <div className="space30"></div>
                                 <div className="">
-                                    <a className="theme-btn2" href="service.html">Discover More <span><i
-                                        className="fa-solid fa-arrow-right"></i></span></a>
+                                    <Link className="theme-btn2" to="/service">Discover More <span><i
+                                        className="fa-solid fa-arrow-right"></i></span></Link>
                                 </div>
                             </div>
                         </div>
@@ -189,8 +189,8 @@ function AboutUs() {
 
                                 <div className="space30"></div>
                                 <div className="">
-                                    <a className="theme-btn2" href="service.html">Discover More <span><i
-                                        className="fa-solid fa-arrow-right"></i></span></a>
+                                    <Link className="theme-btn2" to="/service">Discover More <span><i
+                                        className="fa-solid fa-arrow-right"></i></span></Link>
                                 </div>
                             </div>
                         </div>
