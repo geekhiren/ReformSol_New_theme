@@ -7597,14 +7597,14 @@ a.header__search.header-search-btn p {
   border-radius: 7px;
   padding: 6px;
   border: none;
-  background-color: #F8F9FA;
+  background-color: #1A1B37;
 }
 .service-details-area-all .faq-area-all .accordion .accordion-item button {
   font-size: var(--f-fs-font-fs18);
   line-height: var(--f-fs-font-fs18);
   font-weight: var(--f-fw-semibold);
-  color: var(--ztc-text-text-1);
-  background-color: #F8F9FA;
+  color: var(--ztc-text-text-2);
+  background-color: #1A1B37;
 }
 .service-details-area-all .faq-area-all .accordion .accordion-item button:focus {
   box-shadow: none;
@@ -7615,7 +7615,7 @@ a.header__search.header-search-btn p {
   font-weight: var(--f-fw-regular);
   color: var(--ztc-text-pera-text-2);
   padding: 0px 16px 16px 16px;
-  background-color: #0E38B1;
+  background-color: #1A1B37;
 }
 .service-details-area-all .faq-area-all .accordion .accordion-item.active {
   background: var(--ztc-bg-main-bg-1);
@@ -19270,7 +19270,7 @@ a.header__search.header-search-btn p {
 }
 
 .site-logo {
-  max-width: 130px;
+  max-width: 200px;
   height: auto;
   display: flex;
   align-items: center;

@@ -4,12 +4,9 @@ import { getService, getByIdService, createService, deleteService } from "../ser
 // get Exel Data Actions
 const getServiceExelDataAction = () => {
   return (Dispatch) => {
-    console.log('asdasdasd')
-
     Dispatch({ type: ActionTypes.GET_SERIVCE_EXEL_DATA_REQUEST, })
     getService(SERVICES_BASE_URL).then(
       (response) => {
-        console.log('asdasdasd', response)
         if (response) {
           return Dispatch({ type: ActionTypes.GET_SERIVCE_EXEL_DATA_LIST_SUCESS, data: response })
         }

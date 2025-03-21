@@ -1,120 +1,180 @@
-// import React, { useEffect, useState } from "react";
-// import { connect } from "react-redux";
-// import { Link, useParams } from "react-router-dom";
-// import { getServiceExelDataAction } from "../ReduxStore/actions/ExelDataActions";
+import React, { useEffect, useState } from "react";
+import { connect } from "react-redux";
+import { Link, useParams } from "react-router-dom";
+import blog2_img1 from "../assets/img/blog/blog2-img1.png"
+import service2_icon1 from "../assets/img/icons/service2-icon1.png"
+
+import { getDataAction } from "../ReduxStore/actions/ExelDataActions";
+
+import CommonHero from "../Components/CommonHero.jsx"
+
+function BlogDetails({ getDataAction, servicesList }) {
+    let serviceSlug = useParams();
+
+    const [serviceDetails, setServiceDetails] = useState();
+
+    useEffect(() => {
+        getDataAction()
+    }, [])
 
 
-// function BlogDetails({ ServiceDetailsList, getServiceExelDataAction }) {
-//     let serviceSlug = useParams();
-
-//     const [serviceDetails, setServiceDetails] = useState();
-//     useEffect(() => {
-//         getServiceExelDataAction()
-//     }, [])
-
-//     useEffect(() => {
-//         if (ServiceDetailsList?.services) {
-//             setServiceDetails(ServiceDetailsList.services?.filter(blog => blog.slug == serviceSlug.serviceSlug)[0]);
-//         }
-//     }, [ServiceDetailsList])
-
-//     return (
-//         <>
-//             <div className="uni-banner">
-//                 <div className="container">
-//                     <div className="uni-banner-text-area">
-//                         <h3 className="text-white ">{serviceDetails?.title}</h3>
-//                         <ul>
-//                             <li><Link href="/">Home</Link></li>
-//                             <li>Blog Details</li>
-//                         </ul>
-//                     </div>
-//                 </div>
-//             </div>
-
-//             {serviceDetails ?
-//             <div className="blog-details ptb-100">
-//                 <div className="container">
-//                     <div className="row">
-//                         <div className="col-lg-8 col-md-12 col-sm-12 col-12">
-//                             <div dangerouslySetInnerHTML={{ __html: serviceDetails?.body.replaceAll('"','').replaceAll('`','') }} />
-//                         </div>
-//                         <div className="col-lg-4 col-md-12 col-sm-12 col-12">
-//                             <div className="sidebar-area pt-30">
-//                                 <div className="sidebar-card search-box">
-//                                     <form>
-//                                         <div className="input-group">
-//                                             <input type="text" className="form-control" placeholder="Search Here.." required />
-//                                             <button className="btn" type="submit"><i className="fas fa-search"></i></button>
-//                                         </div>
-//                                     </form>
-//                                 </div>
-//                                 {/* <div className="sidebar-card categories mt-30">
-//                                     <h3>Categories</h3>
-//                                     <ul>
-//                                         <li><a className="active" href="#"><i className="fas fa-angle-right"></i>
-//                                             Business</a></li>
-//                                         <li><a href="#"><i className="fas fa-angle-right"></i> Research</a></li>
-//                                         <li><a href="#"><i className="fas fa-angle-right"></i> Development</a></li>
-//                                         <li><a href="#"><i className="fas fa-angle-right"></i> Branding</a></li>
-//                                         <li><a href="#"><i className="fas fa-angle-right"></i> Marketing</a></li>
-//                                         <li><a href="#"><i className="fas fa-angle-right"></i> Support</a></li>
-//                                     </ul>
-//                                 </div>
-//                                 <div className="sidebar-card recent-news">
-//                                     <h3>Recent News</h3>
-//                                     <div className="recent-news-card">
-//                                         <img src="assets/images/inner-pages/bds1.jpg" alt="image" />
-//                                         <h5><a href="#">Some Important Rules To A New Business</a></h5>
-//                                         <p>5th Jun 2021</p>
-//                                     </div>
-//                                     <div className="recent-news-card">
-//                                         <img src="assets/images/inner-pages/bds2.jpg" alt="image" />
-//                                         <h5><a href="#">Why Would You Need Some New Business</a></h5>
-//                                         <p>4th Jun 2021</p>
-//                                     </div>
-//                                     <div className="recent-news-card">
-//                                         <img src="assets/images/inner-pages/bds3.jpg" alt="image" />
-//                                         <h5><a href="#">Know Top Ten Rules For Corporate Business</a></h5>
-//                                         <p>2nd Jun 2021</p>
-//                                     </div>
-//                                 </div>
-//                                 <div className="sidebar-card sd-tag">
-//                                     <h3>Tags</h3>
-//                                     <ul>
-//                                         <li><a href="#">Marketing</a></li>
-//                                         <li><a href="#">Strategy</a></li>
-//                                         <li><a href="#">Research</a></li>
-//                                         <li><a href="#">Branding</a></li>
-//                                         <li><a href="#">Planning</a></li>
-//                                         <li><a href="#">Support</a></li>
-//                                     </ul>
-//                                 </div> */}
-//                             </div>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </div>
-//             :
-//             <div className="loader-contaner">
-//                 <div className="loader"></div>
-//             </div>
-// }
-//         </>
-//     );
-// }
+    useEffect(() => {
+        if (servicesList?.services) {
+            setServiceDetails(servicesList?.services.find(service => service.slug.toLocaleLowerCase() === serviceSlug.serviceSlug.toLocaleLowerCase()));
+        }
+    }, [servicesList])
 
 
-// const mapStateToProps = (state) => {
-//     return {
-//         ServiceDetailsList: state.ServiceExelDataReducer?.data,
-//     };
-// };
+    console.log(serviceDetails)
 
-// export default connect(
-//     mapStateToProps,
-//     {
-//         getServiceExelDataAction
-//     }
-// )(BlogDetails);
 
+    return (
+        <>
+            <CommonHero mainTitle={"Contact Us"} subTitle={"Contact Us"} />
+
+            {serviceDetails ?
+                <>
+                    <div class="service-details-area-all ">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-lg-12 details-right-space">
+                                    <div class="service-details-post">
+                                        <article>
+                                            <div class="details-post-area">
+                                                {/* <div class="image">
+                                                    <img src={blog2_img1} alt="" />
+                                                </div> */}
+                                                <div class="space30"></div>
+                                                <div class="heading2">
+                                                    <h2>{serviceDetails.title}</h2>
+                                                    <div class="space16"></div>
+                                                    <p>{serviceDetails.description}</p>
+                                                </div>
+                                            </div>
+                                        </article>
+
+                                        <div class="space50"></div>
+
+                                        <article>
+                                            <div class="details-post-area">
+                                                <div class="row">
+
+                                                    {serviceDetails?.subDetails?.length > 0 &&
+                                                        serviceDetails?.subDetails.map(detais =>
+                                                            <div class={detais.class}>
+                                                                <div class="space30"></div>
+                                                                <div class="heading2">
+                                                                    <h5>{detais.title}</h5>
+                                                                    <div class="space16"></div>
+                                                                    <p>{detais.description}</p>
+                                                                </div>
+                                                            </div>
+                                                        )}
+                                                </div>
+                                            </div>
+                                        </article>
+
+                                        <div class="space20"></div>
+
+
+
+                                        <div class="space50"></div>
+
+                                        <div class="faq-area-all">
+                                            <div class="heading2">
+                                                <h5>Frequently Asked Question</h5>
+                                            </div>
+                                            <div class="space20"></div>
+
+                                            <div class="accordion accordion1 accordion-flush" id="accordionFlushExample">
+                                                {serviceDetails?.faq?.length > 0 &&
+                                                    serviceDetails?.faq.map((item, index) =>
+
+                                                        <div class="accordion-item">
+                                                            <h2 class="accordion-header" id={`flush-heading${index}`}>
+                                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse${index}`} aria-expanded="false" aria-controls={`flush-collapse${index}`}>
+                                                                    {item.title}
+                                                                </button>
+                                                            </h2>
+                                                            <div id={`flush-collapse${index}`} class="accordion-collapse collapse" aria-labelledby={`flush-heading${index}`} data-bs-parent="#accordionFlushExample">
+                                                                <div class="accordion-body">{item.description}</div>
+                                                            </div>
+                                                        </div>
+                                                    )}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div >
+
+
+
+                    <div class="servcie2 pb100">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 m-auto text-center">
+                                    <div class="heading2">
+                                        <h2>More Services</h2>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="space30"></div>
+                            <div class="row">
+                                {servicesList?.services?.length > 0 &&
+                                    servicesList?.services.map((service, index) => {
+                                        return (
+                                            index < 2 ?
+                                                <div class="col-lg-4 col-md-6" >
+                                                    <div class="">
+                                                        <div class="servcie2-box">
+                                                            <div class="icon">
+
+                                                                <img src={service2_icon1} alt="" />
+                                                            </div>
+                                                            <a href="#" class="arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                                                            <div class="heading2">
+                                                                <h4><a href="#">{service.title}</a></h4>
+                                                                <div class="space16"></div>
+                                                                <p>{service.sorDescription}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                : null)
+                                    })}
+                            </div>
+
+                            <div class="space40"></div>
+                            <div class="row">
+                                <div class="col-lg-12 text-center">
+                                    <Link class="theme-btn2" to="/services">View All Services <span><i class="fa-solid fa-arrow-right"></i></span></Link>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="space100"></div>
+
+                </>
+                :
+                <div className="loader-contaner">
+                    <div className="loader"></div>
+                </div>
+            }
+        </>
+    );
+}
+
+const mapStateToProps = (state) => {
+    console.log(state)
+    return {
+        servicesList: state.ExelDataReducer?.data
+    };
+};
+
+export default connect(mapStateToProps, { getDataAction })(BlogDetails);

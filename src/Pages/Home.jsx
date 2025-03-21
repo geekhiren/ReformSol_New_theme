@@ -52,8 +52,6 @@ function Home({ getDataAction, dataList }) {
         getDataAction()
     }, [])
 
-    console.log(dataList)
-
 
     return (
         <>
@@ -439,7 +437,7 @@ function Home({ getDataAction, dataList }) {
                         <div className="container">
                             <div className="row">
 
-                                {/* {dataList && dataList?.map((blog, index) => {
+                                {dataList?.blogs?.length && dataList.blogs?.map((blog, index) => {
                                     return (
                                         index < 2 ?
                                             <div className="col-lg-6">
@@ -461,7 +459,7 @@ function Home({ getDataAction, dataList }) {
                                                 </div>
                                             </div>
                                             : null)
-                                })} */}
+                                })}
                             </div>
                             <div className="space60"></div>
                             {/* <div className="row">
@@ -488,8 +486,6 @@ function Home({ getDataAction, dataList }) {
 }
 
 const mapStateToProps = (state) => {
-    console.log('state', state)
-
     return {
         dataList: state.ExelDataReducer?.data
     };

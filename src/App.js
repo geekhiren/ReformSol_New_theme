@@ -5,13 +5,14 @@ import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Services from './Pages/Services ';
 import ServiceDetails from './Pages/ServiceDetails';
-import OurTeam from './Pages/OurTeam';
-import CaseStudy from './Pages/CaseStudy';
-import CaseDetails from './Pages/CaseDetails';
+import Project from './Pages/Project.jsx';
 import Blogs from './Pages/Blog';
 import AboutUs from './Pages/AboutUs';
-import BlogDetails from './Pages/BlogDetails';
 import Contact from './Pages/Contact';
+
+import CaseStudy from './Pages/CaseStudy';
+import CaseDetails from './Pages/CaseDetails';
+import BlogDetails from './Pages/BlogDetails';
 
 function App() {
   return (
@@ -26,8 +27,8 @@ function App() {
           <Route path="/services" Component={Services} />
           <Route path="/service/:serviceSlug" Component={ServiceDetails} />
           <Route path="/blog" Component={Blogs} />
-          {/* <Route path="/our-team" Component={OurTeam} />
-          <Route path="/case-study" Component={CaseStudy} />
+          <Route path="/project" Component={Project} />
+          {/*<Route path="/case-study" Component={CaseStudy} />
           <Route path="/case-study/:caseStudySlug" Component={CaseDetails} />
           <Route path="/blog/:blogSlug" Component={BlogDetails} />
           {/* <Route path="*" Component={Home} /> */}

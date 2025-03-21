@@ -21,7 +21,6 @@ const ExelDataReducer = (state = initialState, action) => {
         isSucess: false,
       };
     case ActionTypes.GET_DATA_LIST_SUCESS:
-      console.log('action', action)
       return {
         isLoading: false,
         data: action.data,

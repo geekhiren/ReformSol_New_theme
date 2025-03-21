@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
 
-import header_logo2 from "../assets/img/logo/header-logo2.png"
+import header_logo2 from "../assets/img/logo/mainLogo2.png"
 import footer1_icon1 from "../assets/img/icons/footer1-icon1.png"
 import footer1_icon2 from "../assets/img/icons/footer1-icon2.png"
 import footer1_icon3 from "../assets/img/icons/footer1-icon3.png"
@@ -78,13 +78,6 @@ function Header() {
 
 
                                     <div className="header2-buttons">
-                                        <div className="contact-3 d-lg-block d-none">
-                                            <div className="consulting2">
-                                                <div className="search-icon header__search header-search-btn">
-                                                    <a href="#"><i className="fa-solid fa-magnifying-glass"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
 
                                         <div className="header-search-form-wrapper">
                                             <div className="tx-search-close tx-close"><i className="fa-solid fa-xmark"></i></div>
