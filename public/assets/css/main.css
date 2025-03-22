@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /*
 ============================
-Name:  TechXen Technology & It Solution Template
+Name:  Reformsol Technology & It Solution Template
 Version: 1.0.0
-Description: TechXen Technology & It Solution Template
+Description: Reformsol Technology & It Solution Template
 Author:  VikingLab
 Author URI: https://themeforest.net/user/vikinglab/portfolio
 Location:
@@ -7438,6 +7438,7 @@ a.header__search.header-search-btn p {
 .servcie2 .servcie2-box .icon {
   height: 50px;
   margin-bottom: 24px;
+  padding-top: 0.8rem;
   width: 50px;
   line-height: 50px;
   text-align: center;
@@ -20916,6 +20917,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 }
 
 .footer2 .copyright-area .arrow-up {
+  padding-top: 1.2rem;
   display: inline-block;
   height: 55px;
   width: 55px;

@@ -53,7 +53,7 @@ function Home({ getDataAction, dataList }) {
                         <div className="col-lg-6">
                             <div className="main-heading">
                                 <span className="span" data-aos="zoom-in-right" data-aos-duration="700">
-                                    {/* <img src={span2} alt="" /> TechXen Technology & It Solution */}
+                                    <img src={span2} alt="" /> Reformsol Technology & It Solution
                                 </span>
                                 <h1 className="title tg-element-title">Crafting Solutions Beyond Boundaries, Driving Progress Together.
                                 </h1>

@@ -14,32 +14,32 @@ import 'swiper/css/pagination';
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 const reviews = [{
-    content: "I have been thoroughly impressed with the level of service and expertise provided by TechXen. Their team went above and beyond to understand our business needs and deliver a custom software solution. I highly recommend them to anyone looking for top-notch technology solutions.",
+    content: "I have been thoroughly impressed with the level of service and expertise provided by Reformsol. Their team went above and beyond to understand our business needs and deliver a custom software solution. I highly recommend them to anyone looking for top-notch technology solutions.",
     writer: "Jason Behrendorff",
     ratting: 5
 },
 {
-    content: "We approached TechXen with a complex IT problem, and they were able to provide an innovative solution that addressed our needs perfectly. Their team's creativity, technical prowess, and dedication to client satisfaction are truly commendable.",
+    content: "We approached Reformsol with a complex IT problem, and they were able to provide an innovative solution that addressed our needs perfectly. Their team's creativity, technical prowess, and dedication to client satisfaction are truly commendable.",
     writer: "Matthew Kuhnemann",
     ratting: 5
 },
 {
-    content: "TechXen has been our go-to partner for IT support for several years now, and they have consistently delivered outstanding service. Their team is highly responsive, knowledgeable, reliable. Thanks to their expertise, we've been able to overcome various IT challenges focus growing business.",
+    content: "Reformsol has been our go-to partner for IT support for several years now, and they have consistently delivered outstanding service. Their team is highly responsive, knowledgeable, reliable. Thanks to their expertise, we've been able to overcome various IT challenges focus growing business.",
     writer: "Scott Boland",
     ratting: 5
 },
 {
-    content: "I have been thoroughly impressed with the level of service and expertise provided by TechXen. Their team went above and beyond to understand our business needs and deliver a custom software solution. I highly them to anyone looking for top-notch technology solutions.",
+    content: "I have been thoroughly impressed with the level of service and expertise provided by Reformsol. Their team went above and beyond to understand our business needs and deliver a custom software solution. I highly them to anyone looking for top-notch technology solutions.",
     writer: "Jason Behrendorff",
     ratting: 5
 },
 {
-    content: "We approached TechXen with a complex IT problem, and they were able to provide an innovative solution that addressed our needs perfectly. Their team's creativity, technical prowess, and dedication to client satisfaction are truly commendable.",
+    content: "We approached Reformsol with a complex IT problem, and they were able to provide an innovative solution that addressed our needs perfectly. Their team's creativity, technical prowess, and dedication to client satisfaction are truly commendable.",
     writer: "Matthew Kuhnemann",
     ratting: 5
 },
 {
-    content: "TechXen has been our go-to partner for IT support for several years now, and they have consistently delivered outstanding service. Their team is highly responsive, knowledgeable, reliable. Thanks to their expertise, we've been able to overcome various IT challenges focus growing business.",
+    content: "Reformsol has been our go-to partner for IT support for several years now, and they have consistently delivered outstanding service. Their team is highly responsive, knowledgeable, reliable. Thanks to their expertise, we've been able to overcome various IT challenges focus growing business.",
     writer: "Scott Boland",
     ratting: 5
 },]

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import header_logo2 from "../assets/img/logo/header-logo2.png"
+import header_logo2 from "../assets/img/logo/mainLogo2.png"
 import footer1_icon1 from "../assets/img/icons/footer1-icon1.png"
 import footer1_icon2 from "../assets/img/icons/footer1-icon2.png"
 import footer1_icon3 from "../assets/img/icons/footer1-icon3.png"
@@ -9,14 +9,14 @@ function Footer() {
     return (
         <>
             <div className="bottom-circle">
-                {/* <div className="cta2">
+                <div className="cta2">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-8 m-auto text-center">
                                 <div className="heading2">
                                     <h2 className="title tg-element-title"> We're Committed To Businesses</h2>
                                     <div className="space16"></div>
-                                    <p>At TechXen IT Solutions, we're dedicated to delivering innovative technology solutions tailored to meet
+                                    <p>At Reformsol IT Solutions, we're dedicated to delivering innovative technology solutions tailored to meet
                                         the unique needs of businesses like yours. </p>
                                     <div className="row">
                                         <div className="col-lg-8 m-auto">
@@ -36,7 +36,7 @@ function Footer() {
                             </div>
                         </div>
                     </div>
-                </div> */}
+                </div>
 
 
                 <div className="footer2 _relative">
@@ -45,11 +45,13 @@ function Footer() {
                             <div className="col-lg-4 col-md-6 col-12">
                                 <div className="single-footer-items footer-logo-area">
                                     <div className="footer-logo">
-                                        <Link href="/"><img src={header_logo2} alt="" /></Link>
+                                        <Link to="/">
+                                            <img src={header_logo2} alt="" />
+                                        </Link>
                                     </div>
                                     <div className="space20"></div>
                                     <div className="heading2">
-                                        <p>At TechXen IT Solutions, we're dedicated to delivering innovative technology solutions tailored to meet
+                                        <p>At Reformsol IT Solutions, we're dedicated to delivering innovative technology solutions tailored to meet
                                             the unique needs of businesses like yours. </p>
                                     </div>
                                     <ul className="social-icon">
