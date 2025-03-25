@@ -41,7 +41,7 @@ let progress = $('#progress1').LineProgressbar({
 });
 
 let progress2 = $('#progress2').LineProgressbar({
-  percentage: 98
+  percentage: 90
 });
 
 let progress3 = $('#progress3').LineProgressbar({

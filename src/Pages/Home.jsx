@@ -55,7 +55,7 @@ function Home({ getDataAction, dataList }) {
                                 <span className="span" data-aos="zoom-in-right" data-aos-duration="700">
                                     <img src={span2} alt="" /> Reformsol Technology & It Solution
                                 </span>
-                                <h1 className="title tg-element-title">Crafting Solutions Beyond Boundaries, Driving Progress Together.
+                                <h1 className="title tg-element-title" >Crafting Solutions Beyond Boundaries, Driving Progress Together.
                                 </h1>
                             </div>
 
@@ -79,8 +79,8 @@ function Home({ getDataAction, dataList }) {
                                             <img src={hero2_shape1} alt="" />
                                         </div>
                                         <div className="shape2">
-                                            <a href="service.html">
-                                                <img src={hero2_shape2} alt="" /></a> </div>
+                                            <Link to="\services">
+                                                <img src={hero2_shape2} alt="" /></Link> </div>
                                     </div>
                                 </div>
                             </div>
@@ -101,22 +101,21 @@ function Home({ getDataAction, dataList }) {
                     <img src={hero2_main_img2} alt="" />
                 </div>
             </div>
-
             <div className="about2">
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-lg-6">
                             <div className="about2-images">
-                                <div className="image1">
+                                <div className="image1" data-aos="zoom-in-right" data-aos-duration="800">
                                     <img src={about2_img1} alt="" />
                                 </div>
-                                <div className="image2">
+                                <div className="image2 reveal image-anime">
                                     <img src={about2_img2} alt="" />
                                 </div>
-                                <div className="image3">
+                                <div className="image3" data-aos="zoom-in-left" data-aos-duration="900">
                                     <img src={about2_img3} alt="" />
                                 </div>
-                                <div className="counter-box">
+                                <div className="counter-box" data-aos="flip-left" data-aos-duration="700">
                                     <h3>25</h3>
                                     <p>Years Of <br /> Experience</p>
                                 </div>
@@ -125,16 +124,16 @@ function Home({ getDataAction, dataList }) {
 
                         <div className="col-lg-6">
                             <div className="heading2">
-                                <span className="span">
-                                    <img src={span2} alt="" /> Our Service</span> <h2>Empower Your Business With Our Comprehensive IT Solutions</h2>
+                                <span className="span" data-aos="zoom-in-left" data-aos-duration="700"><img src={span2} alt="" /> Our Service</span>
+                                <h2 className="title tg-element-title">Empower Your Business With Our Comprehensive IT Solutions</h2>
                                 <div className="space16"></div>
-                                <p>Welcome to TechXen, your premier destination for cutting-edge technology solutions and IT services. At
-                                    TechXen, we are passionate about harnessing the power of technology to empower businesses a like.</p>
+                                <p data-aos="fade-up-left" data-aos-duration="700">Welcome to TechXen, your premier destination for cutting-edge technology solutions and IT services. At TechXen, we are passionate about harnessing the power of technology to empower businesses a like.</p>
 
                                 <div className="space10"></div>
 
-                                <div className="porgress-line-all">
+                                <div className="porgress-line-all" data-aos="fade-up-left" data-aos-duration="900">
                                     <div className="progress-line">
+
                                         <h6>IT Consulting</h6>
                                         <div className="progress1" data-init="true">
                                             <div className="percentCount">100%</div>
@@ -147,7 +146,7 @@ function Home({ getDataAction, dataList }) {
                                     <div className="progress-line">
                                         <h6>Cyber Security</h6>
                                         <div className="progress2" data-init="true">
-                                            <div className="percentCount">98%</div>
+                                            <div className="percentCount">90%</div>
                                             <div className="progressbar" >
                                                 <div className="proggress" >
                                                 </div>
@@ -157,27 +156,36 @@ function Home({ getDataAction, dataList }) {
                                 </div>
 
                                 <div className="space30"></div>
-                                <div className="button">
-                                    <Link className="theme-btn2" to="/about">Learn More <i className="fa-solid fa-arrow-right"></i></Link>
+                                <div className="button" data-aos="fade-up-left" data-aos-duration="800">
+                                    <Link className="theme-btn2" to="\about">Learn More <span className="arrow1"><i className="fa-solid fa-arrow-right"></i></span><span className="arrow2"><i className="fa-solid fa-arrow-right"></i></span></Link>
                                 </div>
 
                             </div>
                         </div>
                     </div>
                 </div>
-            </div >
+            </div>
 
-            <div className="space100"></div>
             {dataList?.services?.length &&
-                <div className="servcie2">
+                <div className="servcie2 pt100">
                     <div className="container">
                         <div className="row">
+                            <div className="col-lg-8 m-auto text-center">
+                                <div className="heading2">
+                                    <span className="span" data-aos="zoom-in-left" data-aos-duration="700">
+                                        <img src={span2} alt="" /> Our Service</span>
+                                    <h2 className="title tg-element-title">Empower Your Business with Our Comprehensive IT Solutions</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="space30"></div>
+                        <div className="row">
                             {dataList?.services?.map(service =>
-                                <div className="col-lg-4 col-md-6">
+                                <div className="col-lg-4 col-md-6" key={service.slug}>
                                     <div className="">
                                         <div className="servcie2-box ">
                                             <div className="icon">
-                                                <img src={service2_icon1} alt="" />
+                                                <img src={service.img} alt="" />
                                             </div>
                                             <Link href={`/service/${service.slug}`} className="arrow"><i className="fa-solid fa-arrow-right"></i></Link>
                                             <div className="heading2">
@@ -191,13 +199,19 @@ function Home({ getDataAction, dataList }) {
                                 </div>
                             )}
                         </div>
+                        <div className="space40"></div>
+                        <div className="row">
+                            <div className="col-lg-12 text-center" data-aos="zoom-in-up" data-aos-duration="700">
+                                <Link className="theme-btn2" to="/services">View All Services <span className="arrow1"><i className="fa-solid fa-arrow-right"></i></span><span className="arrow2"><i className="fa-solid fa-arrow-right"></i></span></Link>
+                            </div>
+                        </div>
 
                     </div>
                 </div>}
 
 
 
-            {/* <div className="work2 pt100">
+            <div className="work2 pt100">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6 m-auto text-center">
@@ -217,7 +231,7 @@ function Home({ getDataAction, dataList }) {
                                 </div>
                                 <div className="space20"></div>
                                 <div className="heading2">
-                                    <h4><a href="service-details.html">Discovery & Consultation</a></h4>
+                                    <h4><Link to="/services">Discovery & Consultation</Link></h4>
                                     <div className="space10"></div>
                                     <p>The journey begins with a thorough discovery phase where we take the time to understand your business,
                                         goals, and challenges. Our experienced team will work closely with you to assess your needs and
@@ -232,7 +246,7 @@ function Home({ getDataAction, dataList }) {
                                 </div>
                                 <div className="space20"></div>
                                 <div className="heading2">
-                                    <h4><a href="service-details.html">Custom Solution Design</a></h4>
+                                    <h4><Link to="/services">Custom Solution Design</Link></h4>
                                     <div className="space10"></div>
                                     <p>Once we have a clear understanding of your requirements, our expert team will design a custom solution
                                         tailored to your specific needs. </p>
@@ -246,7 +260,7 @@ function Home({ getDataAction, dataList }) {
                                 </div>
                                 <div className="space20"></div>
                                 <div className="heading2">
-                                    <h4><a href="service-details.html">Implementation & Integration</a></h4>
+                                    <h4><Link to="/services">Implementation & Integration</Link></h4>
                                     <div className="space10"></div>
                                     <p>With the solution blueprint in hand, our team will begin the implementation and integration <br /> process.
                                     </p>
@@ -260,7 +274,7 @@ function Home({ getDataAction, dataList }) {
                                 </div>
                                 <div className="space20"></div>
                                 <div className="heading2">
-                                    <h4><a href="service-details.html">Testing & Quality Assurance</a></h4>
+                                    <h4><Link to="/services">Testing & Quality Assurance</Link></h4>
                                     <div className="space10"></div>
                                     <p>Before deployment, we conduct rigorous testing and quality assurance checks to ensure that your solution
                                         meets.</p>
@@ -274,7 +288,7 @@ function Home({ getDataAction, dataList }) {
                                 </div>
                                 <div className="space20"></div>
                                 <div className="heading2">
-                                    <h4><a href="service-details.html">Deployment & Training</a></h4>
+                                    <h4><Link to="/services">Deployment & Training</Link></h4>
                                     <div className="space10"></div>
                                     <p>Once testing is complete and your solution is ready to go, we'll handle the deployment process with
                                         precision and care.</p>
@@ -283,7 +297,7 @@ function Home({ getDataAction, dataList }) {
                         </div>
                     </div>
                 </div>
-            </div> */}
+            </div>
 
 
             {/* <div className="team2 pt100">
@@ -432,7 +446,7 @@ function Home({ getDataAction, dataList }) {
                                 {dataList?.blogs?.length && dataList.blogs?.map((blog, index) => {
                                     return (
                                         index < 2 ?
-                                            <div className="col-lg-6">
+                                            <div className="col-lg-6" key={index}>
                                                 <div className="blog2-box">
                                                     <div className="image">
                                                         <img src={blog2_img1} alt="" />
@@ -446,7 +460,7 @@ function Home({ getDataAction, dataList }) {
                                                         <div className="space16"></div>
                                                         <p>We explore the growing trend of remote work and its implications for cybersecurity.</p>
                                                         <div className="space16"></div>
-                                                        <a href="blog-details.html" className="learn">Read More <span><i className="fa-solid fa-arrow-right"></i></span></a>
+                                                        <Link to="/blog" className="learn">Read More <span><i className="fa-solid fa-arrow-right"></i></span></Link>
                                                     </div>
                                                 </div>
                                             </div>

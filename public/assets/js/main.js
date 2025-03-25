@@ -1,5 +1,14 @@
 (function ($) {
   $(document).ready(function () {
+    //Aos animation active
+
+    AOS.init({
+      offset: 100,
+      duration: 400,
+      easing: "ease-in-out",
+      anchorPlacement: "top-bottom",
+      disable: "mobile",
+    });
 
     // sticky header active
     if ($("#header").length > 0) {
@@ -549,15 +558,6 @@
 
 
 
-    //Aos animation active
-
-    AOS.init({
-      offset: 100,
-      duration: 400,
-      easing: "ease-in-out",
-      anchorPlacement: "top-bottom",
-      disable: "mobile",
-    });
 
 
     //Video poppup
@@ -588,7 +588,6 @@
     var offset = 50;
     var duration = 550;
     jQuery(window).on("scroll", function () {
-      console.log('asdsad')
       if (jQuery(this).scrollTop() > offset) {
         jQuery(".progress-wrap").addClass("active-progress");
       } else {

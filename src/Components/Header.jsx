@@ -13,7 +13,7 @@ function Header() {
     return (
         <>
             <ScrollToTop />
-            {/* <section>
+            <section>
                 <div id="preloader">
                     <div id="ctn-preloader" className="ctn-preloader ctn-preloader1">
                         <div className="animation-preloader">
@@ -46,7 +46,7 @@ function Header() {
                         <div className="loader-section-right loader-section section-right"></div>
                     </div>
                 </div>
-            </section> */}
+            </section>
             <header>
                 <div className="header-area header-area2 header-area-all d-none d-lg-block" id="header">
                     <div className="container">
@@ -83,7 +83,7 @@ function Header() {
                                             <div className="tx-search-close tx-close"><i className="fa-solid fa-xmark"></i></div>
                                             <div className="header-search-container">
                                                 <form role="search" className="search-form">
-                                                    <input type="search" className="search-field" placeholder="Search …" value="" name="s" />
+                                                    <input type="search" className="search-field" placeholder="Search …" name="s" />
                                                     <button type="submit" className="search-submit"><i className="fa-solid fa-magnifying-glass"></i></button>
                                                 </form>
                                             </div>

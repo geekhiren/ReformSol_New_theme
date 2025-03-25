@@ -3260,7 +3260,7 @@ body.body {
   .reveal {
     position: relative;
     display: inline-flex;
-    visibility: hidden;
+    /* visibility: hidden; */
     overflow: hidden;
   }
 

@@ -58,50 +58,162 @@ export default function Testimonials() {
                             </div>
                         </div>
                     </div>
-                    <Swiper
-                        spaceBetween={100}
-                        centeredSlides={true}
-                        autoplay={{
-                            delay: 2500,
-                            disableOnInteraction: false,
-                        }}
-                        // pagination={{
-                        //     clickable: true,
-                        // }}
-                        navigation={true}
-                        modules={[Autoplay, Pagination, Navigation]}
-                        className="mt-5 "
+                    <div class="row">
+                        <div class="tes2-slider owl-carousel" data-aos="fade-up" data-aos-duration="700">
+                            {reviews.map((review, index) =>
+                                <div class="single-slider">
+                                    <div class="icon">
+                                        <img src={tes2_icon} alt="" />
+                                    </div>
+                                    <p class="pera">"{review.content}"</p>
 
-                    >
-                        {reviews.map((review, index) =>
-                            <SwiperSlide key={index}>
-                                <div className="owl-item cloned px-lg-5 " key={index}>
-                                    <div className="single-slider">
-                                        <div className="icon">
-                                            <img src={tes2_icon} alt="" />
+                                    <div class="bottom-area">
+                                        <div class="author">
+                                            <a href="#">{review.writer}</a>
                                         </div>
-                                        <p className="pera">"{review.content}"</p>
-
-                                        <div className="bottom-area">
-                                            <div className="author">
-                                                <a href="#">{review.writer}</a>
-                                            </div>
-                                            {/* <div className="reating">
+                                        {/* <div class="reating">
                                             <ul>
-                                                <li><i className="fa-solid fa-star"></i></li>
-                                                <li><i className="fa-solid fa-star"></i></li>
-                                                <li><i className="fa-solid fa-star"></i></li>
-                                                <li><i className="fa-solid fa-star"></i></li>
-                                                <li><i className="fa-solid fa-star-half"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star-half"></i></li>
                                             </ul>
                                             <p>(4.5)</p>
                                         </div> */}
-                                        </div>
                                     </div>
                                 </div>
-                            </SwiperSlide>
-                        )}
-                    </Swiper>
+                            )}
+
+                            <div class="single-slider">
+                                <div class="icon">
+                                    <img src={tes2_icon} alt="" />
+                                </div>
+                                <p class="pera">"We approached TechXen with a complex IT problem, and they were able to provide an
+                                    innovative solution that addressed our needs perfectly. Their team's creativity, technical prowess, and
+                                    dedication to client satisfaction are truly commendable.”</p>
+
+                                <div class="bottom-area">
+                                    <div class="author">
+                                        <a href="#">Matthew Kuhnemann</a>
+                                    </div>
+                                    <div class="reating">
+                                        <ul>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                        </ul>
+                                        <p>(4.5)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="single-slider">
+                                <div class="icon">
+                                    <img src={tes2_icon} alt="" />
+                                </div>
+                                <p class="pera">“TechXen has been our go-to partner for IT support for several years now, and they have
+                                    consistently delivered outstanding service. Their team is highly responsive, knowledgeable, reliable.
+                                    Thanks to their expertise, we've been able to overcome various IT challenges focus growing business."</p>
+
+                                <div class="bottom-area">
+                                    <div class="author">
+                                        <a href="#">Scott Boland</a>
+                                    </div>
+                                    <div class="reating">
+                                        <ul>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star-half"></i></li>
+                                        </ul>
+                                        <p>(4.5)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="single-slider">
+                                <div class="icon">
+                                    <img src={tes2_icon} alt="" />
+                                </div>
+                                <p class="pera">"I have been thoroughly impressed with the level of service and expertise provided by
+                                    TechXen. Their team went above and beyond to understand our business needs and deliver a custom software
+                                    solution. I highly them to anyone looking for top-notch technology solutions."</p>
+
+                                <div class="bottom-area">
+                                    <div class="author">
+                                        <a href="#">Jason Behrendorff</a>
+                                    </div>
+                                    <div class="reating">
+                                        <ul>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star-half"></i></li>
+                                        </ul>
+                                        <p>(4.5)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="single-slider">
+                                <div class="icon">
+                                    <img src={tes2_icon} alt="" />
+                                </div>
+                                <p class="pera">"We approached TechXen with a complex IT problem, and they were able to provide an
+                                    innovative solution that addressed our needs perfectly. Their team's creativity, technical prowess, and
+                                    dedication to client satisfaction are truly commendable.”</p>
+
+                                <div class="bottom-area">
+                                    <div class="author">
+                                        <a href="#">Matthew Kuhnemann</a>
+                                    </div>
+                                    <div class="reating">
+                                        <ul>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                        </ul>
+                                        <p>(4.5)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="single-slider">
+                                <div class="icon">
+                                    <img src={tes2_icon} alt="" />
+                                </div>
+                                <p class="pera">“TechXen has been our go-to partner for IT support for several years now, and they have
+                                    consistently delivered outstanding service. Their team is highly responsive, knowledgeable, reliable.
+                                    Thanks to their expertise, we've been able to overcome various IT challenges focus growing business."</p>
+
+                                <div class="bottom-area">
+                                    <div class="author">
+                                        <a href="#">Scott Boland</a>
+                                    </div>
+                                    <div class="reating">
+                                        <ul>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star-half"></i></li>
+                                        </ul>
+                                        <p>(4.5)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </>
