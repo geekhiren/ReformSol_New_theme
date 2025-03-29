@@ -12,7 +12,7 @@ function Footer() {
                 <div className="cta2">
                     <div className="container">
                         <div className="row">
-                            <div className="col-lg-8 m-auto text-center">
+                            <div className="col-lg-8 m-auto text-center"  data-aos="fade-up" data-aos-duration="900">
                                 <div className="heading2">
                                     <h2 className="title tg-element-title"> We're Committed To Businesses</h2>
                                     <div className="space16"></div>
@@ -117,7 +117,7 @@ function Footer() {
                                             <img src={footer1_icon3} alt="" />
                                         </div>
                                         <div className="pera">
-                                            <a href="mailto:admin@techxen.org">admin@techxen.org</a>
+                                            <a href="mailto:admin@reformsol.com">admin@reformsol.com</a>
                                         </div>
                                     </div>
 
@@ -126,7 +126,7 @@ function Footer() {
                                             <img src={footer1_icon4} alt="" />
                                         </div>
                                         <div className="pera">
-                                            <a href="mailto:admin@techxen.org">www.techxen.org</a>
+                                            <a href="mailto:admin@reformsol.com">www.reformsol.com</a>
                                         </div>
                                     </div>
 
@@ -143,7 +143,7 @@ function Footer() {
                             <div className="row align-items-center">
                                 <div className="col-md-5">
                                     <div className="coppyright">
-                                        <p>Copyright @2024 TechXen.All Rights Reserved</p>
+                                        <p>Copyright @2025 reformsol.All Rights Reserved</p>
                                     </div>
                                 </div>
                                 <div className="col-md-7">

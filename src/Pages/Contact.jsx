@@ -19,7 +19,7 @@ function Contact() {
                         <div className="col-lg-6">
                             <div className="contact-boxs">
                                 <div className="heading1">
-                                    <h2>Contact Information</h2>
+                                    <h2 className="title tg-element-title" data-aos="zoom-in-left" data-aos-duration="700">Contact Information</h2>
                                     <div className="space16"></div>
                                     <p>We’ve grown up with the internet revolution, and we <br /> know how to deliver on its</p>
                                 </div>

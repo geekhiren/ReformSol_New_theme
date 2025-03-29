@@ -4,28 +4,11 @@ import about2_img1 from "../assets/img/about/about2-img1.png"
 import about2_img2 from "../assets/img/about/about2-img2.png"
 import about2_img3 from "../assets/img/about/about2-img3.png"
 import span2 from "../assets/img/icons/span2.png"
-import service2_icon1 from "../assets/img/icons/service2-icon1.png"
-import service2_icon2 from "../assets/img/icons/service2-icon2.png"
-import service2_icon3 from "../assets/img/icons/service2-icon3.png"
-import service2_icon4 from "../assets/img/icons/service2-icon4.png"
-import service2_icon5 from "../assets/img/icons/service2-icon5.png"
-import service2_icon6 from "../assets/img/icons/service2-icon6.png"
-import solution_iocn1 from "../assets/img/icons/solution-iocn1.png"
-import solution_iocn2 from "../assets/img/icons/solution-iocn2.png"
-import solution_img1 from "../assets/img/others/solution-img1.png"
-import solution_img2 from "../assets/img/others/solution-img2.png"
-import solution_img3 from "../assets/img/others/solution-img3.png"
 import work2_img1 from "../assets/img/work/work2-img1.png"
 import work2_img2 from "../assets/img/work/work2-img2.png"
 import work2_img3 from "../assets/img/work/work2-img3.png"
 import work2_img4 from "../assets/img/work/work2-img4.png"
 import work2_img5 from "../assets/img/work/work2-img5.png"
-import team2_img1 from "../assets/img/team/team2-img1.png"
-import team2_img2 from "../assets/img/team/team2-img2.png"
-import team2_img3 from "../assets/img/team/team2-img3.png"
-import team2_img4 from "../assets/img/team/team2-img4.png"
-import tes2_icon from "../assets/img/icons/tes2-icon.png"
-import blog2_img2 from "../assets/img/blog/blog2-img2.png"
 import date from "../assets/img/icons/date.png"
 import blog2_img1 from "../assets/img/blog/blog2-img1.png"
 import user from "../assets/img/icons/user.png"
@@ -53,9 +36,9 @@ function Home({ getDataAction, dataList }) {
                         <div className="col-lg-6">
                             <div className="main-heading">
                                 <span className="span" data-aos="zoom-in-right" data-aos-duration="700">
-                                    <img src={span2} alt="" /> Reformsol Technology & It Solution
+                                    <img src={span2} alt="" data-aos="zoom-in-left" data-aos-duration="700" /> Reformsol Technology & It Solution
                                 </span>
-                                <h1 className="title tg-element-title" >Crafting Solutions Beyond Boundaries, Driving Progress Together.
+                                <h1 className="title tg-element-title " data-aos="zoom-in-left" data-aos-duration="700">Crafting Solutions Beyond Boundaries, Driving Progress Together.
                                 </h1>
                             </div>
 
@@ -125,15 +108,14 @@ function Home({ getDataAction, dataList }) {
                         <div className="col-lg-6">
                             <div className="heading2">
                                 <span className="span" data-aos="zoom-in-left" data-aos-duration="700"><img src={span2} alt="" /> Our Service</span>
-                                <h2 className="title tg-element-title">Empower Your Business With Our Comprehensive IT Solutions</h2>
+                                <h2 className="title tg-element-title" data-aos="zoom-in-left" data-aos-duration="700">Empower Your Business With Our Comprehensive IT Solutions</h2>
                                 <div className="space16"></div>
-                                <p data-aos="fade-up-left" data-aos-duration="700">Welcome to TechXen, your premier destination for cutting-edge technology solutions and IT services. At TechXen, we are passionate about harnessing the power of technology to empower businesses a like.</p>
+                                <p data-aos="fade-up-left" data-aos-duration="700">Welcome to Reformsol, your premier destination for cutting-edge technology solutions and IT services. At Reformsol, we are passionate about harnessing the power of technology to empower businesses a like.</p>
 
                                 <div className="space10"></div>
 
                                 <div className="porgress-line-all" data-aos="fade-up-left" data-aos-duration="900">
                                     <div className="progress-line">
-
                                         <h6>IT Consulting</h6>
                                         <div className="progress1" data-init="true">
                                             <div className="percentCount">100%</div>
@@ -174,12 +156,12 @@ function Home({ getDataAction, dataList }) {
                                 <div className="heading2">
                                     <span className="span" data-aos="zoom-in-left" data-aos-duration="700">
                                         <img src={span2} alt="" /> Our Service</span>
-                                    <h2 className="title tg-element-title">Empower Your Business with Our Comprehensive IT Solutions</h2>
+                                    <h2 className="title tg-element-title" data-aos="zoom-in-left" data-aos-duration="700">Empower Your Business with Our Comprehensive IT Solutions</h2>
                                 </div>
                             </div>
                         </div>
                         <div className="space30"></div>
-                        <div className="row">
+                        <div className="row"  data-aos="fade-up" data-aos-duration="1000">
                             {dataList?.services?.map(service =>
                                 <div className="col-lg-4 col-md-6" key={service.slug}>
                                     <div className="">
@@ -218,7 +200,7 @@ function Home({ getDataAction, dataList }) {
                             <div className="heading2">
                                 <span className="span" data-aos="zoom-in-left" data-aos-duration="700">
                                     <img src={span2} alt="" /> How It Works</span>
-                                <h2 className="title tg-element-title">Unlocking Success The Path To Seamless Solutions</h2>
+                                <h2 className="title tg-element-title" data-aos="zoom-in-left" data-aos-duration="700">Unlocking Success The Path To Seamless Solutions</h2>
                             </div>
                         </div>
                     </div>
@@ -433,7 +415,7 @@ function Home({ getDataAction, dataList }) {
                         <div className="ocl-lg-6 text-center m-auto">
                             <div className="heading2">
                                 <span className="span">
-                                    <img src={span2} alt="" /> Our Blog</span> <h2 className="title tg-element-title">See Our Latest Blog & News</h2>
+                                    <img src={span2} alt="" /> Our Blog</span> <h2 className="title tg-element-title" data-aos="zoom-in-left" data-aos-duration="700">See Our Latest Blog & News</h2>
                             </div>
                         </div>
                     </div>

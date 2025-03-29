@@ -22,8 +22,8 @@ export default function CommonHero({ mainTitle, subTitle, showBreadCrumb = true 
 
               <div className="space16"></div>
               {showBreadCrumb &&
-                <span className="span">
-                  <img src="assets/img/icons/span2.png" alt="" />
+                <span className="span" data-aos="zoom-in-left" data-aos-duration="700">
+                  <img src={span2} alt="" />
                   <Link to="/">Home</Link>
                   <span className="arrow"><i className="fa-regular fa-angle-right"></i></span>
                   {subTitle}

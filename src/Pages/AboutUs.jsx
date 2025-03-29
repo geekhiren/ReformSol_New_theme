@@ -31,16 +31,16 @@ function AboutUs() {
                     <div className="row align-items-center">
                         <div className="col-lg-6">
                             <div className="about2-images">
-                                <div className="image1">
+                                <div className="image1" data-aos="zoom-in-right" data-aos-duration="800">
                                     <img src={about2_img1} alt="" />
                                 </div>
-                                <div className="image2">
+                                <div className="image2 reveal image-anime" data-aos="flip-left" data-aos-duration="800">
                                     <img src={about2_img2} alt="" />
                                 </div>
-                                <div className="image3">
+                                <div className="image3" data-aos="zoom-in-left" data-aos-duration="900">
                                     <img src={about2_img3} alt="" />
                                 </div>
-                                <div className="counter-box">
+                                <div className="counter-box" data-aos="flip-left" data-aos-duration="700">
                                     <h3>25</h3>
                                     <p>Years Of <br /> Experience</p>
                                 </div>
@@ -49,27 +49,41 @@ function AboutUs() {
 
                         <div className="col-lg-6">
                             <div className="heading2">
-                                <span className="span"><img src={span2} alt="" /> Our Service</span>
-                                <h2>Empower Your Business With Our Comprehensive IT Solutions</h2>
+                                <span className="span" data-aos="zoom-in-left" data-aos-duration="700">
+                                    <img src={span2} alt="" /> Our Service</span>
+                                <h2 className="title tg-element-title" data-aos="zoom-in-left" data-aos-duration="700">Empower Your Business With Our Comprehensive IT Solutions</h2>
                                 <div className="space16"></div>
-                                <p>Welcome to TechXen, your premier destination for cutting-edge technology solutions and IT services. At
-                                    TechXen, we are passionate about harnessing the power of technology to empower businesses a like.</p>
+                                <p data-aos="fade-up-left" data-aos-duration="700">Welcome to Reformsol, your premier destination for cutting-edge technology solutions and IT services. At
+                                    Reformsol, we are passionate about harnessing the power of technology to empower businesses a like.</p>
 
                                 <div className="space10"></div>
 
-                                <div className="porgress-line-all">
+                                <div className="porgress-line-all" data-aos="fade-up-left" data-aos-duration="900">
                                     <div className="progress-line">
+
                                         <h6>IT Consulting</h6>
-                                        <div id="progress1" data-init="true"></div>
+                                        <div className="progress1" data-init="true">
+                                            <div className="percentCount">100%</div>
+                                            <div className="progressbar" >
+                                                <div className="proggress" >
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div className="progress-line">
                                         <h6>Cyber Security</h6>
-                                        <div id="progress2" data-init="true"></div>
+                                        <div className="progress2" data-init="true">
+                                            <div className="percentCount">90%</div>
+                                            <div className="progressbar" >
+                                                <div className="proggress" >
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div className="space30"></div>
-                                <div className="button">
+                                <div className="button" data-aos="fade-up-left" data-aos-duration="900">
                                     <Link className="theme-btn2" to="/about">Learn More <i className="fa-solid fa-arrow-right"></i></Link>
                                 </div>
 
@@ -83,21 +97,22 @@ function AboutUs() {
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-lg-6">
-                            <div className="heading2">
-                                <span className="span"><img src={span2} alt="" /> Our Mission</span>
-                                <h2>Innovating for Success: Our Technology Mission</h2>
+                            <div className="heading2" >
+                                <span className="span" data-aos="zoom-in-right" data-aos-duration="700">
+                                    <img src={span2} alt="" /> Our Mission</span>
+                                <h2 className="title tg-element-title" data-aos="zoom-in-right" data-aos-duration="700">Innovating for Success: Our Technology Mission</h2>
                                 <div className="space16"></div>
-                                <p>At TechXen, our mission is simple: to revolutionize the digital landscape by delivering top-notch
+                                <p data-aos="fade-up-right" data-aos-duration="700">At Reformsol, our mission is simple: to revolutionize the digital landscape by delivering top-notch
                                     technology solutions that drive growth, efficiency, and sustainability for our clients. We strive to be
                                     the trusted partner that businesses can rely on to navigate the complexities of the digital world.</p>
                                 <div className="space16"></div>
-                                <p>"At TechXen, our mission is to empower businesses through technology. We believe in harnessing the power
+                                <p data-aos="fade-up-right" data-aos-duration="700">"At Reformsol, our mission is to empower businesses through technology. We believe in harnessing the power
                                     of innovation to drive growth, efficiency, and sustainability for our clients. Through our tailored
                                     technology solutions and unwavering commitment to excellence, we strive to be the catalyst for positive
                                     change in the digital landscape.</p>
 
                                 <div className="space30"></div>
-                                <div className="">
+                                <div className="" data-aos="fade-up-right" data-aos-duration="700">
                                     <Link className="theme-btn2" to="/service">Discover More <span><i
                                         className="fa-solid fa-arrow-right"></i></span></Link>
                                 </div>
@@ -106,14 +121,18 @@ function AboutUs() {
 
                         <div className="col-lg-6">
                             <div className="solution-images">
-                                <div className="image1">
-                                    <img src={solution_img1} alt="" />
+                                <div className="image1" data-aos="zoom-in-right" data-aos-duration="700">
+                                    <img src={about2_img1} alt="" />
                                 </div>
-                                <div className="image2">
-                                    <img src={solution_img2} alt="" />
+                                <div className="image2 reveal image-anime" data-aos="flip-right" data-aos-duration="800">
+                                    <img src={about2_img2} alt="" />
                                 </div>
-                                <div className="image3">
-                                    <img src={solution_img3} alt="" />
+                                <div className="image3" data-aos="zoom-in-left" data-aos-duration="800">
+                                    <img src={about2_img3} alt="" />
+                                </div>
+                                <div className="counter-box" data-aos="flip-left" data-aos-duration="700">
+                                    <h3>25</h3>
+                                    <p>Years Of <br /> Experience</p>
                                 </div>
                             </div>
                         </div>
@@ -127,22 +146,22 @@ function AboutUs() {
                         <div className="col-lg-6">
                             <div className="images">
                                 <div className="row">
-                                    <div className="col-lg-12">
-                                        <div className="image">
+                                    <div className="col-lg-12" data-aos="flip-left" data-aos-duration="700">
+                                        <div className="image image-anime">
                                             <img src={visiton_img1} alt="" />
                                         </div>
                                     </div>
 
-                                    <div className="col-lg-6">
+                                    <div className="col-lg-6" data-aos="zoom-in-right" data-aos-duration="800">
                                         <div className="space30"></div>
-                                        <div className="image">
+                                        <div className="image image-anime">
                                             <img src={visiton_img2} alt="" />
                                         </div>
                                     </div>
 
-                                    <div className="col-lg-6">
+                                    <div className="col-lg-6" data-aos="zoom-in-left" data-aos-duration="700">
                                         <div className="space30"></div>
-                                        <div className="image">
+                                        <div className="image image-anime">
                                             <img src={visiton_img3} alt="" />
                                         </div>
                                     </div>
@@ -152,20 +171,21 @@ function AboutUs() {
                         </div>
                         <div className="col-lg-6">
                             <div className="heading2">
-                                <span className="span"><img src={span2} alt="" /> Our Vision</span>
-                                <h2>Driving Innovation: Our Vision at TechXen</h2>
+                                <span className="span" data-aos="zoom-in-left" data-aos-duration="700">
+                                    <img src={span2} alt="" /> Our Vision</span>
+                                <h2 className="title tg-element-title" data-aos="zoom-in-left" data-aos-duration="700">Driving Innovation: Our Vision at Reformsol</h2>
                                 <div className="space16"></div>
-                                <p>At TechXen, our vision is to be the leading force driving digital transformation and innovation
+                                <p data-aos="fade-up-left" data-aos-duration="700">At Reformsol, our vision is to be the leading force driving digital transformation and innovation
                                     worldwide. We envision a future where businesses of all sizes have the tools and expertise they need to
                                     thrive in an increasingly digital world.</p>
 
-                                <div className="item-box">
+                                <div className="item-box" data-aos="fade-up-left" data-aos-duration="900">
                                     <div className="icon">
                                         <div className="">
                                             <img src={solution_iocn1} alt="" />
                                         </div>
                                     </div>
-                                    <div className="">
+                                    <div className="" >
                                         <h3><a href="#">Network Infrastructure Solutions</a></h3>
                                         <div className="space10"></div>
                                         <p>Build a reliable and secure network infrastructure that <br /> supports your business operations
@@ -173,7 +193,7 @@ function AboutUs() {
                                     </div>
                                 </div>
 
-                                <div className="item-box">
+                                <div className="item-box" data-aos="fade-up-left" data-aos-duration="900">
                                     <div className="icon">
                                         <div className="">
                                             <img src={solution_iocn2} alt="" />
@@ -188,7 +208,7 @@ function AboutUs() {
                                 </div>
 
                                 <div className="space30"></div>
-                                <div className="">
+                                <div className="" data-aos="fade-up-left" data-aos-duration="900">
                                     <Link className="theme-btn2" to="/service">Discover More <span><i
                                         className="fa-solid fa-arrow-right"></i></span></Link>
                                 </div>
@@ -204,13 +224,14 @@ function AboutUs() {
                     <div className="row">
                         <div className="col-lg-10 text-center m-auto">
                             <div className="heading2">
-                                <span className="span"><img src={span2} alt="" /> Our Story</span>
-                                <h2>Our Company Story</h2>
+                                <span className="span" data-aos="zoom-in-left" data-aos-duration="700">
+                                    <img src={span2} alt="" /> Our Story</span>
+                                <h2 className="title tg-element-title" data-aos="zoom-in-left" data-aos-duration="700">Our Company Story</h2>
                             </div>
                         </div>
                     </div>
 
-                    <div className="row">
+                    <div className="row" data-aos="fade-up" data-aos-duration="900">
                         <div className="col-lg-10 m-auto text-center">
                             <ul className="nav nav-pills tab-header-all mb-3" id="pills-tab" role="tablist">
                                 <li className="nav-item" role="presentation">
@@ -247,11 +268,11 @@ function AboutUs() {
 
                     <div className="space60"></div>
                     <div className="row">
-                        <div className="col-lg-12">
+                        <div className="col-lg-12" >
                             <div className="tab-content" id="pills-tabContent">
                                 <div className="tab-pane fade show active" id="about-tab1" role="tabpanel" aria-labelledby="about-tab1-tab">
                                     <div className="row align-items-center">
-                                        <div className="col-lg-6">
+                                        <div className="col-lg-6" data-aos="fade-up-left" data-aos-duration="900">
                                             <div className="tab-content-box">
                                                 <div className="heading2">
                                                     <h5>2017 - A Legacy of Innovation</h5>
@@ -269,15 +290,17 @@ function AboutUs() {
                                         </div>
 
                                         <div className="col-lg-6">
-                                            <div className="image">
-                                                <img src={about_tab_img} alt="" />
+                                            <div className="image " data-aos="fade-up-right" data-aos-duration="900">
+                                                <div className=" image-anime">
+                                                    <img src={about_tab_img} alt="" />
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="tab-pane fade" id="about-tab2" role="tabpanel" aria-labelledby="about-tab2-tab">
                                     <div className="row align-items-center">
-                                        <div className="col-lg-6">
+                                        <div className="col-lg-6" data-aos="fade-up-left" data-aos-duration="900">
                                             <div className="tab-content-box">
                                                 <div className="heading2">
                                                     <h5>2018 - A Legacy of Innovation</h5>
@@ -295,15 +318,17 @@ function AboutUs() {
                                         </div>
 
                                         <div className="col-lg-6">
-                                            <div className="image">
-                                                <img src={about_tab_img} alt="" />
+                                            <div className="image " data-aos="fade-up-right" data-aos-duration="900">
+                                                <div className=" image-anime">
+                                                    <img src={about_tab_img} alt="" />
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="tab-pane fade" id="about-tab3" role="tabpanel" aria-labelledby="about-tab3-tab">
                                     <div className="row align-items-center">
-                                        <div className="col-lg-6">
+                                        <div className="col-lg-6" data-aos="fade-up-left" data-aos-duration="900">
                                             <div className="tab-content-box">
                                                 <div className="heading2">
                                                     <h5>2019 - A Legacy of Innovation</h5>
@@ -321,15 +346,17 @@ function AboutUs() {
                                         </div>
 
                                         <div className="col-lg-6">
-                                            <div className="image">
-                                                <img src={about_tab_img} alt="" />
+                                            <div className="image " data-aos="fade-up-right" data-aos-duration="900">
+                                                <div className=" image-anime">
+                                                    <img src={about_tab_img} alt="" />
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="tab-pane fade" id="about-tab4" role="tabpanel" aria-labelledby="about-tab4-tab">
                                     <div className="row align-items-center">
-                                        <div className="col-lg-6">
+                                        <div className="col-lg-6" data-aos="fade-up-left" data-aos-duration="900">
                                             <div className="tab-content-box">
                                                 <div className="heading2">
                                                     <h5>2020 - A Legacy of Innovation</h5>
@@ -347,15 +374,17 @@ function AboutUs() {
                                         </div>
 
                                         <div className="col-lg-6">
-                                            <div className="image">
-                                                <img src={about_tab_img} alt="" />
+                                            <div className="image " data-aos="fade-up-right" data-aos-duration="900">
+                                                <div className=" image-anime">
+                                                    <img src={about_tab_img} alt="" />
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="tab-pane fade" id="about-tab5" role="tabpanel" aria-labelledby="about-tab5-tab">
                                     <div className="row align-items-center">
-                                        <div className="col-lg-6">
+                                        <div className="col-lg-6" data-aos="fade-up-left" data-aos-duration="900">
                                             <div className="tab-content-box">
                                                 <div className="heading2">
                                                     <h5>2021 - A Legacy of Innovation</h5>
@@ -373,15 +402,17 @@ function AboutUs() {
                                         </div>
 
                                         <div className="col-lg-6">
-                                            <div className="image">
-                                                <img src={about_tab_img} alt="" />
+                                            <div className="image " data-aos="fade-up-right" data-aos-duration="900">
+                                                <div className=" image-anime">
+                                                    <img src={about_tab_img} alt="" />
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="tab-pane fade" id="about-tab6" role="tabpanel" aria-labelledby="about-tab6-tab">
                                     <div className="row align-items-center">
-                                        <div className="col-lg-6">
+                                        <div className="col-lg-6" data-aos="fade-up-left" data-aos-duration="900">
                                             <div className="tab-content-box">
                                                 <div className="heading2">
                                                     <h5>2022 - A Legacy of Innovation</h5>
@@ -399,15 +430,17 @@ function AboutUs() {
                                         </div>
 
                                         <div className="col-lg-6">
-                                            <div className="image">
-                                                <img src={about_tab_img} alt="" />
+                                            <div className="image " data-aos="fade-up-right" data-aos-duration="900">
+                                                <div className=" image-anime">
+                                                    <img src={about_tab_img} alt="" />
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="tab-pane fade" id="about-tab7" role="tabpanel" aria-labelledby="about-tab7-tab">
                                     <div className="row align-items-center">
-                                        <div className="col-lg-6">
+                                        <div className="col-lg-6" data-aos="fade-up-left" data-aos-duration="900">
                                             <div className="tab-content-box">
                                                 <div className="heading2">
                                                     <h5>2023 - A Legacy of Innovation</h5>
@@ -425,8 +458,10 @@ function AboutUs() {
                                         </div>
 
                                         <div className="col-lg-6">
-                                            <div className="image">
-                                                <img src={about_tab_img} alt="" />
+                                            <div className="image " data-aos="fade-up-right" data-aos-duration="900">
+                                                <div className=" image-anime">
+                                                    <img src={about_tab_img} alt="" />
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -445,8 +480,9 @@ function AboutUs() {
                     <div className="row">
                         <div className="col-lg-6 m-auto text-center">
                             <div className="heading2">
-                                <span className="span"><img src={span2} alt="" /> Our Team</span>
-                                <h2>Meet With Our Expert Team</h2>
+                                <span className="span" data-aos="zoom-in-left" data-aos-duration="700">
+                                    <img src={span2} alt="" /> Our Team</span>
+                                <h2 className="title tg-element-title" data-aos="zoom-in-left" data-aos-duration="700">Meet With Our Expert Team</h2>
                             </div>
                         </div>
                     </div>

@@ -106,6 +106,7 @@ function BlogDetails({ getDataAction, servicesList }) {
                         </div>
                     </div >
 
+                    <div className="space30"></div>
 
 
                     <div className="servcie2 pb100">
@@ -113,7 +114,7 @@ function BlogDetails({ getDataAction, servicesList }) {
                             <div className="row">
                                 <div className="col-lg-8 m-auto text-center">
                                     <div className="heading2">
-                                        <h2>More Services</h2>
+                                        <h2 >More Services</h2>
                                     </div>
                                 </div>
                             </div>

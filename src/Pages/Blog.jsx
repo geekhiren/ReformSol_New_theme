@@ -22,7 +22,7 @@ function Blogs({ BlogsList, tagList, getDataAction }) {
                 <div className="container">
                     <div className="row">
                         {BlogsList?.map(blog =>
-                            <div className="col-lg-6">
+                            <div className="col-lg-6" data-aos="fade-up" data-aos-duration="900">
                                 <div className="blog2-box">
                                     <div className="image">
                                         <img src={blog.img} alt="" />

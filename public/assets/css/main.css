@@ -7438,7 +7438,7 @@ a.header__search.header-search-btn p {
 .servcie2 .servcie2-box .icon {
   height: 50px;
   margin-bottom: 24px;
-  padding-top: 0.8rem;
+  padding: 0.5rem;
   width: 50px;
   line-height: 50px;
   text-align: center;
@@ -10337,6 +10337,7 @@ a.header__search.header-search-btn p {
 .solution .item-box .icon img {
   height: auto;
   transition: all 0.4s;
+  padding-top: 1rem;
 }
 
 .solution .item-box:hover .icon {
@@ -17247,25 +17248,27 @@ only screen and (min-width: 768px) and (max-width: 991px) {
   text-align: center;
 }
 
-.testimonial2 .owl-dots button {
-  background: transparent;
-  border: none;
-  color: inherit;
+.testimonial2 .owl-dots button,
+.swiper-pagination-bullet {
+  background: transparent !important;
+  border: none !important;
+  color: inherit !important;
   padding: 0 !important;
-  font: inherit;
-  height: 16px;
-  line-height: 10px;
-  width: 16px;
-  margin: 0 6px;
-  border: none;
-  border-radius: 50%;
-  padding: 5px;
-  margin: 5px;
-  background-color: var(--ztc-bg-main-bg-1);
+  font: inherit !important;
+  height: 16px !important;
+  line-height: 10px !important;
+  width: 16px !important;
+  margin: 0 6px !important;
+  border: none !important;
+  border-radius: 50% !important;
+  padding: 5px !important;
+  margin: 5px !important;
+  background-color: var(--ztc-bg-main-bg-1) !important;
 }
 
-.testimonial2 .owl-dots button.active {
-  background: var(--ztc-bg-main-bg-1);
+.testimonial2 .owl-dots button.active,
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: var(--ztc-bg-main-bg-1) !important;
 }
 
 .tes5 .owl-dots {
@@ -17276,29 +17279,32 @@ only screen and (min-width: 768px) and (max-width: 991px) {
   text-align: center;
 }
 
-.testimonial2 .owl-dots button {
-  position: relative;
-  border: 2px solid #fff !important;
+.testimonial2 .owl-dots button,
+.swiper-pagination-bullet {
+  position: relative !important;
+  border: 2px solid var(--ztc-bg-main-bg-4) !important;
 }
 
-.testimonial2 .owl-dots button:after {
-  position: absolute;
-  content: "";
-  height: 18px;
-  width: 18px;
-  background: var(--ztc-bg-main-bg-1);
-  z-index: -1;
-  border-radius: 50%;
-  left: -3px;
-  top: -3px;
-  transition: all 0.3s;
-  visibility: hidden;
-  opacity: 0;
+.testimonial2 .owl-dots button:after,
+.swiper-pagination-bullet.swiper-pagination-bullet-active:after {
+  position: absolute !important;
+  content: "" !important;
+  height: 18px !important;
+  width: 18px !important;
+  background: var(--ztc-bg-main-bg-1) !important;
+  z-index: -1 !important;
+  border-radius: 50% !important;
+  left: -3px !important;
+  top: -3px !important;
+  transition: all 0.3s !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
 }
 
-.testimonial2 .owl-dots button.active:after {
-  visibility: visible;
-  opacity: 1;
+.testimonial2 .owl-dots button.active:after,
+.swiper-pagination-bullet.swiper-pagination-bullet-active:after {
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .testimonial4 {

@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import ScrollToTop from "./ScrollToTop";
 
 import header_logo2 from "../assets/img/logo/mainLogo2.png"
 import footer1_icon1 from "../assets/img/icons/footer1-icon1.png"
@@ -8,12 +7,24 @@ import footer1_icon2 from "../assets/img/icons/footer1-icon2.png"
 import footer1_icon3 from "../assets/img/icons/footer1-icon3.png"
 import footer1_icon4 from "../assets/img/icons/footer1-icon4.png"
 
+
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+
 function Header() {
+
+    const [showMobileNavigation, setShowMobileNavigation] = useState(false)
+    const { pathname } = useLocation();
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        setShowMobileNavigation(false)
+    }, [pathname]);
+
 
     return (
         <>
-            <ScrollToTop />
-            <section>
+            {/* <section>
                 <div id="preloader">
                     <div id="ctn-preloader" className="ctn-preloader ctn-preloader1">
                         <div className="animation-preloader">
@@ -46,7 +57,7 @@ function Header() {
                         <div className="loader-section-right loader-section section-right"></div>
                     </div>
                 </div>
-            </section>
+            </section> */}
             <header>
                 <div className="header-area header-area2 header-area-all d-none d-lg-block" id="header">
                     <div className="container">
@@ -110,7 +121,7 @@ function Header() {
                             <div className="mobile-logo">
                                 <Link to="/"><img src={header_logo2} alt="" /></Link>
                             </div>
-                            <div className="mobile-nav-icon">
+                            <div className="mobile-nav-icon" onClick={() => { setShowMobileNavigation(true) }}>
                                 <i className="fa-duotone fa-bars-staggered"></i>
                             </div>
                         </div>
@@ -118,7 +129,7 @@ function Header() {
                 </div>
             </div>
 
-            <div className="mobile-sidebar d-block d-lg-none">
+            <div className={`mobile-sidebar d-block d-lg-none ${showMobileNavigation ? 'mobile-menu-active' : ''}`}>
                 <div className="logo-m">
                     <Link to="/"><img src={header_logo2} alt="" /></Link>
                 </div>
@@ -169,7 +180,7 @@ function Header() {
                                 <img src={footer1_icon3} alt="" />
                             </div>
                             <div className="pera">
-                                <a href="mailto:admin@techxen.org">admin@techxen.org</a>
+                                <a href="mailto:admin@reformsol.com">admin@reformsol.com</a>
                             </div>
                         </div>
 
@@ -178,7 +189,7 @@ function Header() {
                                 <img src={footer1_icon4} alt="" />
                             </div>
                             <div className="pera">
-                                <a href="mailto:admin@techxen.org">www.techxen.org</a>
+                                <a href="mailto:admin@reformsol.com">www.reformsol.com</a>
                             </div>
                         </div>
 

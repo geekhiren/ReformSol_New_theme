@@ -22,18 +22,19 @@ function Blogs({ BlogsList, tagList, getDataAction }) {
                 <div className="container">
                     <div className="row">
 
-                        {BlogsList?.map(blog => <div className="col-lg-4 col-md-6">
-                            <div className="project-page-box">
-                                <div className="image">
-                                    <img src={blog.img} alt="" />
-                                </div>
-                                <div className="heading2">
-                                    <h4><Link href="/">{blog.title}</Link></h4>
-                                    <Link href="/" className="learn">Learn More <span><i
-                                        className="fa-solid fa-arrow-right"></i></span></Link>
+                        {BlogsList?.map(blog =>
+                            <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="900">
+                                <div className="project-page-box">
+                                    <div className="image">
+                                        <img src={blog.img} alt="" />
+                                    </div>
+                                    <div className="heading2">
+                                        <h4><Link href="/">{blog.title}</Link></h4>
+                                        <Link href="/" className="learn">Learn More <span><i
+                                            className="fa-solid fa-arrow-right"></i></span></Link>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         )}
                     </div>
                     <div className="space60"></div>
