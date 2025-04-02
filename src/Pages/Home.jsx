@@ -161,7 +161,7 @@ function Home({ getDataAction, dataList }) {
                             </div>
                         </div>
                         <div className="space30"></div>
-                        <div className="row"  data-aos="fade-up" data-aos-duration="1000">
+                        <div className="row" data-aos="fade-up" data-aos-duration="1000">
                             {dataList?.services?.map(service =>
                                 <div className="col-lg-4 col-md-6" key={service.slug}>
                                     <div className="">
@@ -191,7 +191,52 @@ function Home({ getDataAction, dataList }) {
                     </div>
                 </div>}
 
+            <div className="solution pt100">
+                <div className="container">
+                    <div className="row align-items-center">
+                        <div className="col-lg-6">
+                            <div className="heading2" >
+                                <span className="span" data-aos="zoom-in-right" data-aos-duration="700">
+                                    <img src={span2} alt="" /> Our Mission</span>
+                                <h2 className="title tg-element-title" data-aos="zoom-in-right" data-aos-duration="700">Innovating for Success: Our Technology Mission</h2>
+                                <div className="space16"></div>
+                                <p data-aos="fade-up-right" data-aos-duration="700">At Reformsol, our mission is simple: to revolutionize the digital landscape by delivering top-notch
+                                    technology solutions that drive growth, efficiency, and sustainability for our clients. We strive to be
+                                    the trusted partner that businesses can rely on to navigate the complexities of the digital world.</p>
+                                <div className="space16"></div>
+                                <p data-aos="fade-up-right" data-aos-duration="700">"At Reformsol, our mission is to empower businesses through technology. We believe in harnessing the power
+                                    of innovation to drive growth, efficiency, and sustainability for our clients. Through our tailored
+                                    technology solutions and unwavering commitment to excellence, we strive to be the catalyst for positive
+                                    change in the digital landscape.</p>
 
+                                <div className="space30"></div>
+                                <div className="" data-aos="fade-up-right" data-aos-duration="700">
+                                    <Link className="theme-btn2" to="/service">Discover More <span><i
+                                        className="fa-solid fa-arrow-right"></i></span></Link>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-6">
+                            <div className="solution-images">
+                                <div className="image1" data-aos="zoom-in-right" data-aos-duration="700">
+                                    <img src={about2_img1} alt="" />
+                                </div>
+                                <div className="image2 reveal image-anime" data-aos="flip-right" data-aos-duration="800">
+                                    <img src={about2_img2} alt="" />
+                                </div>
+                                <div className="image3" data-aos="zoom-in-left" data-aos-duration="800">
+                                    <img src={about2_img3} alt="" />
+                                </div>
+                                <div className="counter-box" data-aos="flip-left" data-aos-duration="700">
+                                    <h3>25</h3>
+                                    <p>Years Of <br /> Experience</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div className="work2 pt100">
                 <div className="container">

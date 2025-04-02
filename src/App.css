@@ -27,3 +27,7 @@
 .swiper-wrapper {
     height: unset !important;
 }
+
+.swiper {
+    padding-bottom: 3rem !important;
+}

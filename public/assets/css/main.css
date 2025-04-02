@@ -304,7 +304,7 @@ body {
 }
 
 .comon-body {
-  background-image: url(../img/bg/comon-bg.png);
+  /* background-image: url(../img/bg/comon-bg.png); */
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -17130,7 +17130,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
   padding: 24px;
   border-radius: 7px;
   margin: 0 10px;
-  /* min-height: 450px; */
+  min-height: 450px;
   position: relative;
   border: none;
 }
